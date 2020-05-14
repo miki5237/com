@@ -1,0 +1,52 @@
+/* 리셋 */
+img {width: 100%;}
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: #000;}
+
+/* 레이아웃 */
+#wrap {width: 1000px; margin: 0 auto; margin-top: 20px;}
+#nav {width: 20%; height: 800px; float: left;}
+#header {width: 80%; float: left;}
+#content1 {width: 80%; float: left; margin: 40px 0;}
+#content2 {width: 80%; float: left; background-color: #f7f7f7; margin: 40px 0;}
+#footer {clear: both; background-color: #edf2f8; margin-bottom: 20px;}
+
+/* nav */
+#nav img {width: 150px;}
+.nav {margin-top: 50px;}
+.nav ul li a {margin-bottom: 10px;}
+.nav ul li .active {color: #006cd2;}
+.nav ul li ul li {border-bottom: 1px solid #e3e3e3; margin-right: 5%; padding: 5px;}
+
+/* header */
+
+/* content1 */
+#content1 .cont-h {margin-bottom: 40px; margin-left: 35%;}
+#content1 .cont-h li {display: inline;}
+#content1 .cont-h li a {color: #adadad;}
+#content1 .cont-h .active a {color: #000;}
+#content1 .comt {overflow: hidden;}
+#content1 .comt .comt {width: 20%; float: left;}
+#content1 .comt .comt p {text-align: center; font-size: 14px; margin-top: 5px;}
+
+/* content2 */
+#content2 .cont {
+    width: 29.3333%; float: left; 
+    margin: 40px 0 20px 20px ; background-color: #fff;
+    border: 3px solid #000;
+    position: relative;
+}
+#content2 .cont h2 {text-align: center; padding: 20px 0;}
+#content2 .cont img {width: 100px; margin-left: 50px; }
+#content2 .cont ul {padding: 20px;}
+#content2 .cont li {list-style: inside; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+#content2 .cont .mao {position: absolute; top: 10px; left: 150px;}
+#content2 .cont .mao img {width: 20px;}
+
+/* footer */
+#footer {overflow: hidden;}
+#footer .img {width: 10%; float: left;}
+#footer .img img {width: 80px;}
+#footer .text {width: 60%; float: left; margin-top: 30px;}
+#footer .img2 {width: 25%; float: left; margin-top: 30px; margin-right: 5%;}

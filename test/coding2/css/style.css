@@ -1,0 +1,60 @@
+/* 리셋 */
+* {margin: 0; padding: 0;}
+a {color: #000; text-decoration: none;}
+li {list-style: none;}
+em {font-style: normal;}
+img {width: 100%;}
+
+/* 레이아웃 */
+#warp {}
+#header {}
+#banner {}
+#content1 {overflow: hidden; margin-top: 20px;}
+#content2 {margin-top: 20px;}
+#footer {width: 100%; background-color: #202020; margin-top: 20px;}
+
+.colg {width: 1200px; height: inherit; margin: 0 auto;}
+
+/* header */
+.header {overflow: hidden; display: block;}
+.header .logp {width: 10%; float: left;}
+.header .logp-r {float: right; overflow: hidden; padding-top: 30px;}
+.header .logp-r li {float: left; margin: 10px; }
+.header .logp-r li a {text-align: left;}
+
+/* content1 */
+.sba1 {width: 49%; height: 170px; margin-right: 2%;overflow: hidden; float: left; background-color: #f2f2f2;}
+.sba1 .sba-text {float: left; padding: 2% 3%;}
+.sba1 .sba-text div {margin-top: 40px;}
+.sba1 .sba-img {float: right;}
+
+
+.sba2 {width: 49%; height: 170px; overflow: hidden; float: right; background-color: #f2f2f2;}
+.sba2 .sba-text {float: left; padding: 2% 3%;}
+.sba2 .sba-text div {margin-top: 40px;}
+.sba2 .sba-text div em {font-size: 15px; color: #616161; margin-left: 5%;}
+.sba2 .sba-img {float: right;}
+
+/* content2 */
+.cont2 {overflow: hidden;}
+.cont2 h2 em {color: #616161;}
+.cont2 div {margin-top: 20px;}
+
+.cont2 .box1 {float: left; width: 32%; height: 450px; margin-right: 2%;}
+.cont2 .box1 div {margin-top: 3%;}
+.cont2 .box1 div em {color: #616161;}
+
+.cont2 .box2 {float: left; width: 32%; height: 450px; margin-right: 2%;}
+.cont2 .box2 div {margin-top: 3%;}
+.cont2 .box2 div em {color: #616161;}
+
+.cont2 .box3 {float: left; width: 32%; height: 450px;}
+.cont2 .box3 div {margin-top: 3%;}
+.cont2 .box3 div em {color: #616161;}
+
+/* footer */
+footer {overflow: hidden; display: block; padding: 30px;}
+.fo-img {width: 10%; float: left;}
+.fo-text {float: right; overflow: hidden;}
+.fo-text li {float: left; text-align: left; color: #fff;}
+.fo-text li em {color: #616161;}
