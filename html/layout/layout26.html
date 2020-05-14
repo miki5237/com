@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시험</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        #warp {width: 100%;}
+        .header {height: 327px; background-image: url(header_bg.jpg);}
+        .header-menu {text-align: right;}
+        .header-menu a {color: #fff;,
+        padding: 8px 0 6px 10px; display: inline-block;}
+        .header-menu a:hover {color: #ccc;}
+        .header-tit {text-align: center; margin-top: 55px;}
+        .header-tit h1 {background: #51b0dc; color: #fff; font-size: 30px; display: inline-block; 
+        padding: 5px 30px;}
+        .header-tit a {color: #fff; background: #4a9abf; font-size: 16px; display: inline-block; 
+        padding: 10px 20px; margin-top: -7px; transition: box-shadow 0.25s;}
+        .header-tit a:hover {box-shadow: 0 0 0 40px rgba(255,25,255,0);}
+        .header-ion {text-align: center; margin-top: 30px;}
+        .header-ion a {display: inline-block; text-align: center; background-image: url(icon.png); width: 60px; height: 60px;}
+        .header-ion a.ion1 {background-position:0 0;}
+        .header-ion a.ion2 {background-position:0 -60px;}
+        .header-ion a.ion3 {background-position:0 -120px;} 
+        .header-ion a.ion4 {background-position:0 -180px;}
+        .header-ion a.ion1:hover {background-position:-60px 0;}
+        .header-ion a.ion2:hover {background-position:-60px -60px;}
+        .header-ion a.ion3:hover {background-position:-60px -120px;} 
+        .header-ion a.ion4:hover {background-position:-60px -180px;}
+
+        .cora {width: 1200px; margin: 0 auto;}
+        #content1 {overflow: hidden;}
+        #content1 .cont1-1 {width: 33.3333%; height: 400px; background-color: #64b5f6; float: left;}
+        #content1 .cont1-2 {width: 66.6666%; height: 200px; background-color: #42a5f5; float: left;}
+        #content1 .cont1-3 {width: 66.6666%; height: 200px; background-color: #2196f3 ; float: left;}
+        #content2 {overflow: hidden;}
+        #content2 .cont2-1 {width: 33.3333%; height: 300px; background-color: #1e88e5; float: left;}
+        #content2 .cont2-2 {width: 33.3333%; height: 300px; background-color: #1976d2; float: left;}
+        #content2 .cont2-3 {width: 33.3333%; height: 300px; background-color: #1565c0; float: left;}
+        #content3 {width: 94%; background-color: #42a5f5; padding: 3%; overflow: hidden;}
+        #content3 div {width: 21%; height: 200px; float: left; background-color: #1976d2; margin: 2%;}
+        #footer {width: 100%; height: 100px; background-color: #64b5f6;}
+
+        @media (max-width: 1220px){
+            #header-top {width: 100%; height: 100px; background-color: #bbdefb;}
+            #header-bottom {width: 100%; height: 300px; background-color: #90caf9;}
+            #header {display: none;}
+            .cora {width: 100%;}
+            #content2 .cont2-1 {width: 50%;}
+            #content2 .cont2-2 {display: none;}
+            #content2 .cont2-3 {width: 50%;}
+            #content3 div {width: 29.3333%;}   
+            #content3 .div4 {display: none;}   
+        }
+
+        @media (max-width: 768px){
+            #content2 .cont2-1 {width: 100%;}
+            #content2 .cont2-3 {width: 100%;}
+        }
+
+        @media (max-width: 480px){
+            #content1 .cont1-1 {width: 100%; height: 200px;}
+            #content1 .cont1-2 {width: 100%; }
+            #content1 .cont1-3 {width: 100%; }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <header class="header">
+            <div class="header-menu">
+                <a href="#">Blog</a>    
+                <a href="#">Github</a>    
+                <a href="#">Webstandard</a>    
+            </div>
+            <div class="header-tit">
+                <h1>Professional Web Publisher</h1><br>
+                <a href="http://miki5237.dothome.co.kr">miki5237.dothome.co.kr/</a>
+            </div>
+            <div class="header-ion">
+                <a href="#" class="ion1"></a>
+                <a href="#" class="ion2"></a>
+                <a href="#" class="ion3"></a>
+                <a href="#" class="ion4"></a>
+            </div>
+        </header>
+        <div class="cora">
+        <header id="header-top"></header>
+        <header id="header-bottom"></header>
+        <section id="content1">
+            <section class="cont1-1"></section>
+            <section class="cont1-2"></section>
+            <section class="cont1-3"></section>
+        </section>
+        <section id="content2">
+            <section class="cont2-1"></section>
+            <section class="cont2-2"></section>
+            <section class="cont2-3"></section>
+        </section>
+        <section id="content3">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div3"></div>
+            <div class="div4"></div>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+    </div> 
+</body>
+</html>
