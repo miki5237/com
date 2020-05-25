@@ -1,0 +1,146 @@
+/* 폰트 */
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* 레이아웃 */
+#nav {
+    position: fixed; left: 0; top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 55px;
+    transition: top 0.6s ease;
+    background: #fff;
+    border-bottom: 1px solid #ededed;
+}
+#nav.on {
+    top: -200px;
+}
+#header {
+    height: 700px;
+    background: url(../img/header.jpg) no-repeat center;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+#banner {
+    height: 540px;
+}
+
+/* 컨테이너 */
+.container {
+    width: 1200px; margin: 0 auto;
+}
+
+/* 네비게이션 */
+.nav {
+    overflow: hidden;
+    .nav-svg {
+        padding: 0 20px;
+        float: left;
+        display: inline-block;
+        a {
+            width: 100%;
+            height: 55px;
+            display: inline-block;
+            svg {
+                width: 60px; height: 60px;
+                g polyline {
+                    fill: #00b0fd;
+                }
+            } 
+        }
+        
+    }
+    .nav-text {
+        float: right;
+        text-align: center;
+        ul {
+            padding: 3% 0;
+            li {
+                display: inline-block;
+                font-size: 13px;
+                padding: 0 20px;
+                font-weight: inherit;
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    display: inline-block;
+                }
+            }
+            .nav-li-Price {
+                border: 1px solid #00b0fd;
+                padding: 2px 20px;
+                &:hover {
+                    background: #00b0fd;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+            .li a:hover{
+                border-bottom: 2px solid #00b0fd;
+            }
+        }
+
+    }
+}
+
+/* 헤드 */
+.header {
+    text-align: center;
+    height: 100px;
+    padding-top: 350px;
+    h1 {
+        z-index: 5;
+        min-width: 815px;
+        max-width: 815px;
+        font-size: 41px;
+        line-height: 46px;
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+        margin: 0 auto;
+    }
+    p {
+        z-index: 5;
+        min-width: 815px;
+        max-width: 815px;
+        font-size: 23px;
+        line-height: 46px;
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+        margin: 0 auto;
+    }
+}
+
+/* 베너 */
+.banner {
+    overflow: hidden;
+    padding-top: 100px;
+    .img {
+        width: 30%;
+        float: left;
+        svg {
+            width: 100%;
+        }
+    }
+    .text {
+        width: 70%;
+        float: right;
+        h2 {
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+}
+
+
+
+/* 미디어쿼리 */
+
+@media (max-width:1220px){
+    .container {width: 100%;}
+}

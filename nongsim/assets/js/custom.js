@@ -1,9 +1,12 @@
-let wHeight = $(window).height();   
-let dHeight = $(document).height(); 
-let hHeight = $("#header").outerHeight();
+/********************** 농심 *****************************/
 
-let moveScroll;   
-let lastScrollTop = 0; 
+/* header */
+let wHeight = $(window).height();   // 브라우저 높이
+let dHeight = $(document).height(); // 컨텐츠의 높이
+let hHeight = $("#header").outerHeight(); //80 헤더의 높이
+
+let moveScroll;   //스크롤 값을 감지하기 위한 변수
+let lastScrollTop = 0; //스크롤의 마지막 위치 값
 
 $(window).scroll(function(){
   moveScroll = true;
@@ -18,11 +21,11 @@ setInterval(function(){
 
 function hasScroll(){
   let wScroll = $(this).scrollTop();
-  if(wScroll > lastScrollTop){ 
+  if(wScroll > lastScrollTop){ //스크롤을 내렸을 때
     
     $("#header").addClass("on");
   } else {
-    if( wScroll + wHeight < dHeight ){ 
+    if( wScroll + wHeight < dHeight ){ //스크롤을 올렸을 때
        $("#header").removeClass("on");
     }
   }
@@ -31,6 +34,7 @@ function hasScroll(){
   
 }
 
+/* banner */
 var mySwiper = new Swiper ('#banner .swiper-container', {
   loop: true,
   pagination: {
@@ -46,6 +50,7 @@ var mySwiper = new Swiper ('#banner .swiper-container', {
   }
 })
 
+/* notice */
 var mySwiper2 = new Swiper ('.notice .swiper-container', {
   loop: true,
   spaceBetween: 60,
@@ -53,6 +58,7 @@ var mySwiper2 = new Swiper ('.notice .swiper-container', {
   centeredSlides: true
 })
 
+/* story */
 var mySwiper3 = new Swiper ('.story .swiper-container', {
   loop: true,
   slidesPerView: 'auto',
@@ -61,7 +67,21 @@ var mySwiper3 = new Swiper ('.story .swiper-container', {
 
 
 
-/* N.LIVE */
+$(window).scroll(function(){
+  const scrollTop = $(window).scrollTop() +$(window).height()/2;
+
+  $("#contents > section").each(function(){
+    if(scrollTop > $(this).offset().top) {
+        $(this).addClass("show");
+    }
+  });
+});
+
+
+
+/************************* N.LIVE *********************/
+
+/* #banner-live */
 var mySwiper4 = new Swiper ('#banner-live .banner .swiper-container', {
   loop: true,
   slidesPerView: 'auto',
@@ -72,8 +92,7 @@ var mySwiper4 = new Swiper ('#banner-live .banner .swiper-container', {
   }
 })
 
-
-
+/* nlive */
 let tabBtn = $(".nlive-tabs > ul > li"); 
 let tabCont = $(".nlive-posts > div");   
 
@@ -88,3 +107,12 @@ tabBtn.click(function(event){
   tabCont.css("display","none");
   tabCont.eq(index).css("display","block");
 });
+
+/* bonbox4 */
+var swiper = new Swiper('#bonbox4 .swiper-container', {
+  slidesPerView: 3,
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+$('#stone').css('width','156px');

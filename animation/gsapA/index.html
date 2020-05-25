@@ -90,504 +90,273 @@
         <div class="row">
 
             <div class="col-md-9" role="main">
+                <!-- Intro0 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro0" class="page-header">gsap</h2>
+                    <p>웹 브라우저에서 애니메이션을 구현하기 위한 자바스크립 라이브러리입니다. 
+                       기존 CSS,jQuery Animation보다 탁월한 퍼포먼스를 발휘할 수 있도록
+                        최적화된 애니메이션 전용 라이브러리입니다.   
+                    </p>
+                </div>
+                <!-- //Intro0 -->
+                <style>
+                    .circle {
+                        width: 60px;height: 60px;border-radius: 50%;
+                        text-align: center;line-height: 60px;
+                        font-size: 12px; color: #fff;
+                        background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+                        margin-bottom: 10px;
+                        position: relative;
+                    }
+                    
+                </style>
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">background</h2>
-
-                    <h3 class="pt30">문법</h3>
-                    <p class="bs-callout bs-callout-info">
-                        background-image : url | linear-gradient | radial-gradient | repeating-linear-gradient | repeating-radial-gradient | none;
-                    </p>
-                    <div class="table-reponsive">
-                        <table class="table table-bordered table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th>종류</th>
-                                    <th>예시</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>url</td>
-                                    <td>background-image 주소를 설정합니다.</td>
-                                </tr>
-                                <tr>
-                                    <td>none</td>
-                                    <td>background-image를 설정하지 않습니다.</td>
-                                </tr>
-                                <tr>
-                                    <td>linear-gradient</td>
-                                    <td>선형 그라데이션 백그라운드를 설정합니다.</td>
-                                </tr>
-                                <tr>
-                                    <td>radial-gradient</td>
-                                    <td>원형 그라데이션 백그라운드를 설정합니다.</td>
-                                </tr>
-                                <tr>
-                                    <td>repeating-linear-gradient</td>
-                                    <td>반복 선형 그라데이션 백그라운드를 설정합니다.</td>
-                                </tr>
-                                <tr>
-                                    <td>repeating-radial-gradient</td>
-                                    <td>반복 원형 그라데이션 백그라운드를 설정합니다.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <h2 id="intro1" class="page-header">이동하기</h2>
+                    <h4 class="btn1">animate 
+                        <button class="btn btn1">Start</button>
+                    </h4>
+                    <div class="well">
+                        <div class="box1">
+                            <div class="circle circle1">box</div>
+                            <div class="circle circle2">box</div>
+                            <div class="circle circle3">box</div>
+                            <div class="circle circle4">box</div>
+                            <div class="circle circle5">box</div>
+                            <div class="circle circle6">box</div>
+                            <div class="circle circle7">box</div>
+                            <div class="circle circle8">box</div>
+                            <div class="circle circle9">box</div>
+                            <div class="circle circle10">box</div>
+                        </div>
                     </div>
+<pre class="line-numbers language-css"><code>$(".btn1").click(function(){
+    // $(".box1> div").animate({left:"90%"},1000);
+    gsap.to(".box1 .circle1", 1, {left:"90%"})
+    gsap.to(".box1 .circle2", 1, {left:"90%",borderRadius:"0%"})
+    gsap.to(".box1 .circle3", 1, {left:"90%",rotationY:"300deg"});
+    gsap.to(".box1 .circle4", 1, {left:"90%",rotationX:"700deg"});
+    gsap.to(".box1 .circle5", 1, {left:"90%",backgroundImage: "linear-gradient(to top, #a8edea 0%, #fed6e3 100%)"});
+    gsap.to(".box1 .circle6", 1, {left:"90%",scale:"3",rotationY:"300deg"});
+    gsap.to(".box1 .circle7", 1, {left:"90%",scale:"3",rotation:"300deg"});
+    gsap.to(".box1 .circle8", 1, {left:"90%",scale:"0.5",rotation:"1300deg"});
+    gsap.to(".box1 .circle9", 1, {left:"90%",scale:"0",rotation:"300deg"});
+    gsap.to(".box1 .circle10", 1, {left:"90%",skew:"30deg"});
+});</code></pre>
                 </div>
                 <!-- //Intro1 -->
 
-                <style>
-                    .sBox {
-                        background-color: #f4f8fa; padding: 15px; 
-                        overflow: hidden;}
-                    .sBox .box {
-                        width: 150px; height: 150px; 
-                        float: left; font-family: 'Abel'; text-align: center; line-height: 150px; color: #fff;
-                        border: 0; background: none;
-                    }
-                </style>
-
-                <style>
-                    .gradient1 {background-image: linear-gradient(to top, #a18cd1, #fbc2eb);}
-                    .gradient2 {background-image: linear-gradient(to left, #a18cd1, #fbc2eb);}
-                    .gradient3 {background-image: linear-gradient(to right, #a18cd1, #fbc2eb);}
-                    .gradient4 {background-image: linear-gradient(to bottom, #a18cd1, #fbc2eb);}
-                </style>
-
                 <!-- Intro2 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">Gradient1</h2>
-                    <div class="sBox">
-                        <div class="box gra1">
-                            <div class="gradient1">gradient1</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient2">gradient2</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient3">gradient3</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient4">gradient4</div>
+                    <h2 id="intro2" class="page-header">이동하기 (from)</h2>
+                    <h4 class="btn2">animate 
+                        <button class="btn btn2">Start</button>
+                    </h4>
+                    <div class="well">
+                        <div class="box2">
+                            <div class="circle circle1">box</div>
+                            <div class="circle circle2">box</div>
+                            <div class="circle circle3">box</div>
+                            <div class="circle circle4">box</div>
+                            <div class="circle circle5">box</div>
+                            <div class="circle circle6">box</div>
+                            <div class="circle circle7">box</div>
+                            <div class="circle circle8">box</div>
+                            <div class="circle circle9">box</div>
+                            <div class="circle circle10">box</div>
                         </div>
                     </div>
-<pre class="line-numbers language-css"><code>.gradient1 {background-image: linear-gradient(to top, #a18cd1, #fbc2eb);}
-.gradient2 {background-image: linear-gradient(to left, #a18cd1, #fbc2eb);}
-.gradient3 {background-image: linear-gradient(to right, #a18cd1, #fbc2eb);}
-.gradient4 {background-image: linear-gradient(to bottom, #a18cd1, #fbc2eb);}</code></pre>
+<pre class="line-numbers language-css"><code>$(".btn2").click(function(){
+    gsap.from(".box2 .circle1", 1, {left:"90%"})
+    gsap.from(".box2 .circle2", 1, {left:"90%",borderRadius:"0%"})
+    gsap.from(".box2 .circle3", 1, {left:"90%",rotationY:"300deg"});
+    gsap.from(".box2 .circle4", 1, {left:"90%",rotationX:"700deg"});
+    gsap.from(".box2 .circle5", 1, {left:"90%",backgroundImage: "linear-gradient(to top, #a8edea 0%, #fed6e3 100%)"});
+    gsap.from(".box2 .circle6", 1, {left:"90%",scale:"3",rotationY:"300deg"});
+    gsap.from(".box2 .circle7", 1, {left:"90%",scale:"3",rotation:"300deg"});
+    gsap.from(".box2 .circle8", 1, {left:"90%",scale:"0.5",rotation:"1300deg"});
+    gsap.from(".box2 .circle9", 1, {left:"90%",scale:"0",rotation:"300deg"});
+    gsap.from(".box2 .circle10", 1, {left:"90%",skew:"30deg"});
+});</code></pre>
                 </div>
                 <!-- //Intro2 -->
 
-                <style>
-                    .gradient5 {background-image: linear-gradient(0deg, #84fab0, #8fd3f4);}
-                    .gradient6 {background-image: linear-gradient(30deg, #84fab0, #8fd3f4);}
-                    .gradient7 {background-image: linear-gradient(90deg, #84fab0, #8fd3f4);}
-                    .gradient8 {background-image: linear-gradient(120deg, #84fab0, #8fd3f4);}
-                </style>
-
                 <!-- Intro3 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro3" class="page-header">Gradient2</h2>
-                    <div class="sBox">
-                        <div class="box gra1">
-                            <div class="gradient5">gradient5</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient6">gradient6</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient7">gradient7</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient8">gradient8</div>
+                    <h2 id="intro3" class="page-header">이동하기 (ease)</h2>
+                    <h4 class="btn3">animate 
+                        <button class="btn btn3">Start</button>
+                    </h4>
+                    <div class="well">
+                        <div class="box3">
+                            <div class="circle circle1">box</div>
+                            <div class="circle circle2">box</div>
+                            <div class="circle circle3">box</div>
+                            <div class="circle circle4">box</div>
+                            <div class="circle circle5">box</div>
+                            <div class="circle circle6">box</div>
+                            <div class="circle circle7">box</div>
+                            <div class="circle circle8">box</div>
+                            <div class="circle circle9">box</div>
                         </div>
                     </div>
-<pre class="line-numbers language-css"><code>.gradient5 {background-image: linear-gradient(0deg, #84fab0, #8fd3f4);}
-.gradient6 {background-image: linear-gradient(30deg, #84fab0, #8fd3f4);}
-.gradient7 {background-image: linear-gradient(90deg, #84fab0, #8fd3f4);}
-.gradient8 {background-image: linear-gradient(120deg, #84fab0, #8fd3f4);}</code></pre>
+<pre class="line-numbers language-css"><code>$(".btn3").click(function(){
+    gsap.to(".box3 .circle1", {duration: 2, left:"90%", rotationY: "300deg", ease: "power1.out"})
+    gsap.to(".box3 .circle2", {duration: 2, left:"90%", rotationY: "310deg", ease: "power2.out"})
+    gsap.to(".box3 .circle3", {duration: 2, left:"90%", rotationY: "320deg", ease: "power3.out"});
+    gsap.to(".box3 .circle4", {duration: 2, left:"90%", rotationY: "330deg", ease: "power4.out"});
+    gsap.to(".box3 .circle5", {duration: 2, left:"90%", rotationY: "340deg", ease: "back.out(1.7)"});
+    gsap.to(".box3 .circle6", {duration: 2, left:"90%", rotationY: "350deg", ease: "elastic.out(1, 0.3)"});
+    gsap.to(".box3 .circle7", {duration: 2, left:"90%", rotationY: "360deg", ease: "bounce.out"});
+    gsap.to(".box3 .circle8", {duration: 2, left:"90%", rotationY: "370deg", ease: "slow(0.7, 0.7, false"});
+    gsap.to(".box3 .circle9", {duration: 2, left:"90%", rotationY: "380deg", ease: "steps(12)"});
+});</code></pre>
                 </div>
                 <!-- //Intro3 -->
 
-                <style>
-                    .gradient9 {background-image: linear-gradient(140deg, #fa709a, #fee140);}
-                    .gradient10 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a);}
-                    .gradient11 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0);}
-                    .gradient12 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff);}
-                    .gradient13 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2);}
-                    .gradient14 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2, #009efd);}
-                    .gradient15 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2, #009efd, #2575fc);}
-                    .gradient16 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2, #009efd, #2575fc, #72afd3);}
-                </style>
-
                 <!-- Intro4 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro4" class="page-header">Gradient3</h2>
-                    <div class="sBox">
-                        <div class="box gra1">
-                            <div class="gradient9">gradient9</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient10">gradient10</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient11">gradient11</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient12">gradient12</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient13">gradient13</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient14">gradient14</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient15">gradient15</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient16">gradient16</div>
+                    <h2 id="intro4" class="page-header">반복하기</h2>
+                    <h4 class="btn4">animate 
+                        <button class="btn btn4">Start</button>
+                    </h4>
+                    <div class="well">
+                        <div class="box4">
+                            <div class="circle circle1">box</div>
+                            <div class="circle circle2">box</div>
+                            <div class="circle circle3">box</div>
+                            <div class="circle circle4">box</div>
+                            <div class="circle circle5">box</div>
                         </div>
                     </div>
-<pre class="line-numbers language-css"><code>.gradient9 {background-image: linear-gradient(140deg, #fa709a, #fee140);}
-.gradient10 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a);}
-.gradient11 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0);}
-.gradient12 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff);}
-.gradient13 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2);}
-.gradient14 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2, #009efd);}
-.gradient15 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2, #009efd, #2575fc);}
-.gradient16 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2, #009efd, #2575fc, #72afd3);}</code></pre>
+<pre class="line-numbers language-css"><code>$(".btn4").click(function(){
+    gsap.to(".box4 .circle1", {duration: 1, repeat:1, yoyo: true, left:"90%", rotation:"720deg", ease:"power4.out"})
+    gsap.to(".box4 .circle2", {duration: 1, repeat:2, yoyo: true, left:"90%", rotation:"720deg", ease:"power4.out"})
+    gsap.to(".box4 .circle3", {duration: 1, repeat:3, yoyo: true, left:"90%", rotation:"720deg", ease:"power4.out"})
+    gsap.to(".box4 .circle4", {duration: 1, repeat:4, yoyo: true, left:"90%", rotation:"720deg", ease:"power4.out"})
+    gsap.to(".box4 .circle5", {duration: 1, repeat:-1, yoyo: true, left:"90%", rotation:"720deg", ease:"power4.out"})
+})</code></pre>
                 </div>
                 <!-- //Intro4 -->
 
-                <style>
-                    .gradient17 {background-image: linear-gradient(140deg, #fa709a, #fee140);}
-                    .gradient18 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a);}
-                    .gradient19 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0);}
-                    .gradient20 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff);}
-                    .gradient21 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2);}
-                    .gradient22 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2, #009efd);}
-                    .gradient23 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2, #009efd, #2575fc);}
-                    .gradient24 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2, #009efd, #2575fc, #72afd3);}
-                </style>
-
                 <!-- Intro5 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro5" class="page-header">Gradient4</h2>
-                    <div class="sBox">
-                        <div class="box gra1">
-                            <div class="gradient17">gradient17</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient18">gradient18</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient19">gradient19</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient20">gradient20</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient21">gradient21</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient22">gradient22</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient23">gradient23</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient24">gradient24</div>
+                    <h2 id="intro5" class="page-header">Timeline</h2>
+                    <h4 class="btn5">animate 
+                        <button class="btn btn5">Start</button>
+                    </h4>
+                    <div class="well">
+                        <div class="box5">
+                            <div class="circle circle1">box</div>
                         </div>
                     </div>
-<pre class="line-numbers language-css"><code>.gradient17 {background-image: linear-gradient(140deg, #fa709a, #fee140);}
-.gradient18 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a);}
-.gradient19 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0);}
-.gradient20 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff);}
-.gradient21 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2);}
-.gradient22 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2, #009efd);}
-.gradient23 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2, #009efd, #2575fc);}
-.gradient24 {background-image: linear-gradient(140deg, #fa709a, #fee140, #fa709a, #30cfd0, #66a6ff, #764ba2, #009efd, #2575fc, #72afd3);}</code></pre>
+<pre class="line-numbers language-css"><code>$(".box5").css("height","400px");
+$(".btn5").click(function(){
+    let tl = new TimelineMax();
+    tl.to(".box5 .circle1",{duration: 1, left: "90%", scale:"1", ease: "power2.out"})
+        .to(".box5 .circle1",{duration: 1, top: "80%",  scale:"0.5", ease: "power2.out"})
+        .to(".box5 .circle1",{duration: 1, left: "0",  scale:"2.5", ease: "power2.out"})
+        .to(".box5 .circle1",{duration: 1, top: "0",  scale:"1", ease: "power2.out"})
+})</code></pre>
                 </div>
                 <!-- //Intro5 -->
 
-                <style>
-                    .gradient25 {background-image: linear-gradient(45deg, #c471f5 50%, #fa71cd 50%);}
-                    .gradient26 {background-image: linear-gradient(90deg, #c471f5 50%, #fa71cd 50%);}
-                    .gradient27 {background-image: linear-gradient(120deg, #c471f5 50%, #fa71cd 50%);}
-                    .gradient28 {background-image: linear-gradient(160deg, #c471f5 50%, #fa71cd 50%);}
-                </style>
-
                 <!-- Intro6 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro6" class="page-header">Gradient5</h2>
-                    <div class="sBox">
-                        <div class="box gra1">
-                            <div class="gradient25">gradient25</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient26">gradient26</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient27">gradient27</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient28">gradient28</div>
+                    <h2 id="intro6" class="page-header">Controlling</h2>
+                    <h4>animate 
+                        <button class="btn btn6-1">play</button>
+                        <button class="btn btn6-2">pause</button>
+                        <button class="btn btn6-3">resume</button>
+                        <button class="btn btn6-4">reverse</button>
+                        <button class="btn btn6-5">seek(0.5)</button>
+                        <button class="btn btn6-6">timeScale(0.5)</button>
+                        <button class="btn btn6-7">timeScale(2)</button>
+                        <button class="btn btn6-8">kill</button>
+                        <button class="btn btn6-9">restart()</button>
+                    </h4>
+                    <div class="well">
+                        <div class="box6">
+                            <div class="circle circle1">box</div>
                         </div>
                     </div>
-<pre class="line-numbers language-css"><code>.gradient25 {background-image: linear-gradient(45deg, #c471f5 50%, #fa71cd 50%);}
-.gradient26 {background-image: linear-gradient(90deg, #c471f5 50%, #fa71cd 50%);}
-.gradient27 {background-image: linear-gradient(120deg, #c471f5 50%, #fa71cd 50%);}
-.gradient28 {background-image: linear-gradient(160deg, #c471f5 50%, #fa71cd 50%);}</code></pre>
+<pre class="line-numbers language-css"><code>const tw = gsap.to(".box6 .circle1", {duration: 1, left: "90%", borderRadius: "0%", rotation: "720deg" })
+tw.pause();
+
+$(".btn6").click(function(){
+    gsap.to(".box6 .circle1", {duration: 1, left: "90%", borderRadius: "0%", rotation: "720deg" })
+});
+$(".btn6-1").click(function(){ tw.play()});
+$(".btn6-2").click(function(){ tw.pause()});
+$(".btn6-3").click(function(){ tw.repeat()});
+$(".btn6-4").click(function(){ tw.reverse()});
+$(".btn6-5").click(function(){ tw.seek(0.5)});
+$(".btn6-6").click(function(){ tw.timeScale(0.5)});
+$(".btn6-7").click(function(){ tw.timeScale(2)});
+$(".btn6-8").click(function(){ tw.kill()});
+$(".btn6-9").click(function(){ tw.repeat()});</code></pre>
                 </div>
                 <!-- //Intro6 -->
 
-                <style>
-                    .gradient29 {background: radial-gradient(#2a5298 0%, #209cff 20%, #68e0cf 100%);}
-                    .gradient30 {background: radial-gradient(#2a5298 0%, #209cff 30%, #68e0cf 100%);}
-                    .gradient31 {background: radial-gradient(#2a5298 0%, #209cff 40%, #68e0cf 100%);}
-                    .gradient32 {background: radial-gradient(#2a5298 0%, #209cff 50%, #68e0cf 100%);}
-                    .gradient33 {background: radial-gradient(#2a5298 0%, #209cff 60%, #68e0cf 100%);}
-                    .gradient34 {background: radial-gradient(#2a5298 0%, #209cff 70%, #68e0cf 100%);}
-                    .gradient35 {background: radial-gradient(#2a5298 0%, #209cff 80%, #68e0cf 100%);}
-                    .gradient36 {background: radial-gradient(#2a5298 0%, #209cff 90%, #68e0cf 100%);}
-                </style>
-
                 <!-- Intro7 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro7" class="page-header">Gradient6</h2>
-                    <div class="sBox">
-                        <div class="box gra1">
-                            <div class="gradient29">gradient29</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient30">gradient30</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient31">gradient31</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient32">gradient32</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient33">gradient29</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient34">gradient34</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient35">gradient35</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient36">gradient36</div>
+                    <h2 id="intro7" class="page-header">Controlling</h2>
+                    <ul>
+                        <li>onComplete : 애니메이션이 완료되었을 때</li>
+                        <li>onStart : 애니메이션이 시작할 때</li>
+                        <li>onUpdate : 애니메이션이 업데이트 될 때마다</li>
+                        <li>onRepeat : 애니메이션이 반복될 때</li>
+                        <li>onRepeatComplete : 애니메이션이 리버스 되고 완료되었을 때</li>
+                    </ul>
+                    <h4>animate 
+                        <button class="btn btn7-1">jquery</button>
+                        <button class="btn btn7-2">gsap</button>
+                    </h4>
+                    <div class="well">
+                        <div class="box7">
+                            <div class="circle circle1">box</div>
                         </div>
                     </div>
-<pre class="line-numbers language-css"><code>.gradient29 {background: radial-gradient(#2a5298 0%, #209cff 20%, #68e0cf 100%);}
-.gradient30 {background: radial-gradient(#2a5298 0%, #209cff 30%, #68e0cf 100%);}
-.gradient31 {background: radial-gradient(#2a5298 0%, #209cff 40%, #68e0cf 100%);}
-.gradient32 {background: radial-gradient(#2a5298 0%, #209cff 50%, #68e0cf 100%);}
-.gradient33 {background: radial-gradient(#2a5298 0%, #209cff 60%, #68e0cf 100%);}
-.gradient34 {background: radial-gradient(#2a5298 0%, #209cff 70%, #68e0cf 100%);}
-.gradient35 {background: radial-gradient(#2a5298 0%, #209cff 80%, #68e0cf 100%);}
-.gradient36 {background: radial-gradient(#2a5298 0%, #209cff 90%, #68e0cf 100%);}</code></pre>
+<pre class="line-numbers language-css"><code>$(".btn7-1").click(function(){
+    $(".btn7 .circle1").animate({ left: "90%"}, 1000, function(){
+        $(".btn7 .circle1").animate({ left: "0"}, 1000)
+    });
+});
+
+$(".btn7-2").click(function(){
+    gsap.to(".box7 .circle1",{duration:1, left: "90%", onComplete: com})
+});
+
+function com(){
+    gsap.to(".box7 .circle1",{duration:1, left: "0"})
+}</code></pre>
                 </div>
                 <!-- //Intro7 -->
 
-                <style>
-                    .gradient29 {background: radial-gradient(#2a5298 0%, #209cff 20%, #68e0cf 100%);}
-                    .gradient30 {background: radial-gradient(#2a5298 0%, #209cff 30%, #68e0cf 100%);}
-                    .gradient31 {background: radial-gradient(#2a5298 0%, #209cff 40%, #68e0cf 100%);}
-                    .gradient32 {background: radial-gradient(#2a5298 0%, #209cff 50%, #68e0cf 100%);}
-                    .gradient33 {background: radial-gradient(#2a5298 0%, #209cff 60%, #68e0cf 100%);}
-                    .gradient34 {background: radial-gradient(#2a5298 0%, #209cff 70%, #68e0cf 100%);}
-                    .gradient35 {background: radial-gradient(#2a5298 0%, #209cff 80%, #68e0cf 100%);}
-                    .gradient36 {background: radial-gradient(#2a5298 0%, #209cff 90%, #68e0cf 100%);}
-                </style>
-
                 <!-- Intro8 -->
                 <div class="bs-docs-section">
-                    <h2 id="Intro8" class="page-header">Gradient7</h2>
-                    <div class="sBox">
-                        <div class="box gra1">
-                            <div class="gradient29">gradient29</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient30">gradient30</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient31">gradient31</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient32">gradient32</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient33">gradient29</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient34">gradient34</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient35">gradient35</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient36">gradient36</div>
-                        </div>
-                    </div>
-<pre class="line-numbers language-css"><code>.gradient29 {background: radial-gradient(#2a5298 0%, #209cff 20%, #68e0cf 100%);}
-.gradient30 {background: radial-gradient(#2a5298 0%, #209cff 30%, #68e0cf 100%);}
-.gradient31 {background: radial-gradient(#2a5298 0%, #209cff 40%, #68e0cf 100%);}
-.gradient32 {background: radial-gradient(#2a5298 0%, #209cff 50%, #68e0cf 100%);}
-.gradient33 {background: radial-gradient(#2a5298 0%, #209cff 60%, #68e0cf 100%);}
-.gradient34 {background: radial-gradient(#2a5298 0%, #209cff 70%, #68e0cf 100%);}
-.gradient35 {background: radial-gradient(#2a5298 0%, #209cff 80%, #68e0cf 100%);}
-.gradient36 {background: radial-gradient(#2a5298 0%, #209cff 90%, #68e0cf 100%);}</code></pre>
+                    <h2 id="intro8" class="page-header">Gsap Animation1</h2>
+                    <p class="codepen" data-height="700" data-theme-id="light" data-default-tab="result" data-user="miki5237" data-slug-hash="yLYZjbX" style="height: 700px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Gsap Animation1">
+                        <span>See the Pen <a href="https://codepen.io/miki5237/pen/yLYZjbX">
+                        Gsap Animation1</a> by miki5237 (<a href="https://codepen.io/miki5237">@miki5237</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                 </div>
                 <!-- //Intro8 -->
 
-                <style>
-                    .gradient37 {background: radial-gradient(ellipse farthest-corner at center top, #f8bfa4 0%, #f33b4e 100%);}
-                    .gradient38 {background: radial-gradient(ellipse farthest-corner at left top, #f8bfa4 0%, #f33b4e 100%);}
-                    .gradient39 {background: radial-gradient(ellipse farthest-corner at right top, #f8bfa4 0%, #f33b4e 100%);}
-                    .gradient40 {background: radial-gradient(ellipse farthest-corner at bottom left, #f8bfa4 0%, #f33b4e 100%);}
-                    .gradient41 {background: radial-gradient(ellipse farthest-corner at bottom center, #f8bfa4 0%, #f33b4e 100%);}
-                    .gradient42 {background: radial-gradient(ellipse farthest-corner at center top, #f8bfa4 0%, #f33b4e 100%);}
-                    .gradient43 {background: radial-gradient(ellipse farthest-corner at left top, #f8bfa4 0%, #f33b4e 100%);}
-                    .gradient44 {background: radial-gradient(ellipse farthest-corner at right center, #f8bfa4 0%, #f33b4e 100%);}
-                </style>
-
                 <!-- Intro9 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro9" class="page-header">Gradient8</h2>
-                    <div class="sBox">
-                        <div class="box gra1">
-                            <div class="gradient37">gradient37</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient38">gradient38</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient39">gradient39</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient40">gradient40</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient41">gradient41</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient42">gradient42</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient43">gradient43</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient44">gradient44</div>
-                        </div>
-                    </div>
-<pre class="line-numbers language-css"><code>.gradient37 {background: radial-gradient(ellipse farthest-corner at center top, #f8bfa4 0%, #f33b4e 100%);}
-.gradient38 {background: radial-gradient(ellipse farthest-corner at left top, #f8bfa4 0%, #f33b4e 100%);}
-.gradient39 {background: radial-gradient(ellipse farthest-corner at right top, #f8bfa4 0%, #f33b4e 100%);}
-.gradient40 {background: radial-gradient(ellipse farthest-corner at bottom left, #f8bfa4 0%, #f33b4e 100%);}
-.gradient41 {background: radial-gradient(ellipse farthest-corner at bottom center, #f8bfa4 0%, #f33b4e 100%);}
-.gradient42 {background: radial-gradient(ellipse farthest-corner at center top, #f8bfa4 0%, #f33b4e 100%);}
-.gradient43 {background: radial-gradient(ellipse farthest-corner at left top, #f8bfa4 0%, #f33b4e 100%);}
-.gradient44 {background: radial-gradient(ellipse farthest-corner at right center, #f8bfa4 0%, #f33b4e 100%);}</code></pre>
+                    <h2 id="intro9" class="page-header">Gsap Animation2</h2>
+                    <p class="codepen" data-height="700" data-theme-id="light" data-default-tab="result" data-user="miki5237" data-slug-hash="rNOPKeo" style="height: 700px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Gsap Animation2">
+                        <span>See the Pen <a href="https://codepen.io/miki5237/pen/rNOPKeo">
+                        Gsap Animation2</a> by miki5237 (<a href="https://codepen.io/miki5237">@miki5237</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                 </div>
                 <!-- //Intro9 -->
 
-                <style>
-                    .gradient45 {background-image: repeating-linear-gradient(45deg, transparent 5px, transparent 25px, #33691e 10px, #7cb342 45px);}
-                    .gradient46 {background-image: repeating-linear-gradient(45deg, transparent 10px, transparent 25px, #33691e 15px, #7cb342 45px);}
-                    .gradient47 {background-image: repeating-linear-gradient(45deg, transparent 15px, transparent 25px, #33691e 20px, #7cb342 45px);}
-                    .gradient48 {background-image: repeating-linear-gradient(45deg, transparent 20px, transparent 25px, #33691e 25px, #7cb342 45px);}
-                </style>
-
-                <!-- Intro10 -->
-                <div class="bs-docs-section">
-                    <h2 id="intro10" class="page-header">Gradient9</h2>
-                    <div class="sBox">
-                        <div class="box gra1">
-                            <div class="gradient45">gradient45</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient46">gradient46</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient47">gradient47</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient48">gradient48</div>
-                        </div>
-                    </div>
-<pre class="line-numbers language-css"><code>.gradient45 {background-image: repeating-linear-gradient(45deg, transparent 5px, transparent 25px, #33691e 10px, #7cb342 45px);}
-    .gradient46 {background-image: repeating-linear-gradient(45deg, transparent 10px, transparent 25px, #33691e 15px, #7cb342 45px);}
-    .gradient47 {background-image: repeating-linear-gradient(45deg, transparent 15px, transparent 25px, #33691e 20px, #7cb342 45px);}
-    .gradient48 {background-image: repeating-linear-gradient(45deg, transparent 20px, transparent 25px, #33691e 25px, #7cb342 45px);}</code></pre>
-                </div>
-                <!-- //Intro10 -->
-
-                <style>
-                    .gradient49 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 5px, #fda085 10px);}
-                    .gradient50 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 5px, #fda085 15px);}
-                    .gradient51 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 5px, #fda085 20px);}
-                    .gradient52 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 5px, #fda085 25px);}
-                </style>
-
-                <!-- Intro11 -->
-                <div class="bs-docs-section">
-                    <h2 id="intro11" class="page-header">Gradient9</h2>
-                    <div class="sBox">
-                        <div class="box gra1">
-                            <div class="gradient49">gradient49</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient50">gradient50</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient51">gradient51</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient52">gradient52</div>
-                        </div>
-                    </div>
-<pre class="line-numbers language-css"><code>.gradient49 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 5px, #fda085 10px);}
-.gradient50 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 5px, #fda085 15px);}
-.gradient51 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 5px, #fda085 20px);}
-.gradient52 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 5px, #fda085 25px);}</code></pre>
-                </div>
-                <!-- //Intro11 -->
-
-                <style>
-                    .gradient53 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 10px, #fda085 10px);}
-                    .gradient54 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 15px, #fda085 15px);}
-                    .gradient55 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 20px, #fda085 20px);}
-                    .gradient56 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 25px, #fda085 25px);}
-                </style>
-
-                <!-- Intro12 -->
-                <div class="bs-docs-section">
-                    <h2 id="intro12" class="page-header">Gradient11</h2>
-                    <div class="sBox">
-                        <div class="box gra1">
-                            <div class="gradient53">gradient53</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient54">gradient54</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient55">gradient55</div>
-                        </div>
-                        <div class="box gra1">
-                            <div class="gradient56">gradient56</div>
-                        </div>
-                    </div>
-<pre class="line-numbers language-css"><code>.gradient53 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 10px, #fda085 10px);}
-.gradient54 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 15px, #fda085 15px);}
-.gradient55 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 20px, #fda085 20px);}
-.gradient56 {background: repeating-radial-gradient(#f6d365, #f6d365 5px, #fda085 25px, #fda085 25px);}</code></pre>
-                </div>
-                <!-- //Intro12 -->
        
             </div>
             <!-- //col-md-9 -->
@@ -597,19 +366,15 @@
             <div class="col-md-3">
                 <div class="bs-sidebar hidden-print" role="complementary">
                     <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">background</a></li>
-                        <li><a href="#intro2">Gradient1</a></li>
-                        <li><a href="#intro3">Gradient2</a></li>
-                        <li><a href="#intro4">Gradient3</a></li>
-                        <li><a href="#intro5">Gradient4</a></li>
-                        <li><a href="#intro6">Gradient5</a></li>
-                        <li><a href="#intro7">Gradient6</a></li>
-                        <li><a href="#intro8">Gradient7</a></li>
-                        <li><a href="#intro9">Gradient8</a></li>
-                        <li><a href="#intro10">Gradient9</a></li>
-                        <li><a href="#intro11">Gradient10</a></li>
-                        <li><a href="#intro12">Gradient11</a></li>
-                        <li><a href="#intro13">Gradient12</a></li>
+                        <li><a href="#intro1">이동하기</a></li>
+                        <li><a href="#intro2">이동하기 (from)</a></li>
+                        <li><a href="#intro3">이동하기 (ease)</a></li>
+                        <li><a href="#intro4">반복하기</a></li>
+                        <li><a href="#intro5">Timeline</a></li>
+                        <li><a href="#intro6">Controlling</a></li>
+                        <li><a href="#intro7">Controlling</a></li>
+                        <li><a href="#intro8">Gsap Animation1</a></li>
+                        <li><a href="#intro9">Gsap Animation2</a></li>
                     </ul>
                 </div>
             </div>
@@ -639,9 +404,116 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
     <script src="../../assets/js/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js -->
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js -->
+
+
+    <script>
+        //1
+
+        $(".btn1").click(function(){
+            // $(".box1> div").animate({left:"90%"},1000);
+            gsap.to(".box1 .circle1", 1, {left:"90%"})
+            gsap.to(".box1 .circle2", 1, {left:"90%",borderRadius:"0%"})
+            gsap.to(".box1 .circle3", 1, {left:"90%",rotationY:"300deg"});
+            gsap.to(".box1 .circle4", 1, {left:"90%",rotationX:"700deg"});
+            gsap.to(".box1 .circle5", 1, {left:"90%",backgroundImage: "linear-gradient(to top, #a8edea 0%, #fed6e3 100%)"});
+            gsap.to(".box1 .circle6", 1, {left:"90%",scale:"3",rotationY:"300deg"});
+            gsap.to(".box1 .circle7", 1, {left:"90%",scale:"3",rotation:"300deg"});
+            gsap.to(".box1 .circle8", 1, {left:"90%",scale:"0.5",rotation:"1300deg"});
+            gsap.to(".box1 .circle9", 1, {left:"90%",scale:"0",rotation:"300deg"});
+            gsap.to(".box1 .circle10", 1, {left:"90%",skew:"30deg"});
+        });
+
+        //2
+
+        $(".btn2").click(function(){
+            gsap.from(".box2 .circle1", 1, {left:"90%"})
+            gsap.from(".box2 .circle2", 1, {left:"90%",borderRadius:"0%"})
+            gsap.from(".box2 .circle3", 1, {left:"90%",rotationY:"300deg"});
+            gsap.from(".box2 .circle4", 1, {left:"90%",rotationX:"700deg"});
+            gsap.from(".box2 .circle5", 1, {left:"90%",backgroundImage: "linear-gradient(to top, #a8edea 0%, #fed6e3 100%)"});
+            gsap.from(".box2 .circle6", 1, {left:"90%",scale:"3",rotationY:"300deg"});
+            gsap.from(".box2 .circle7", 1, {left:"90%",scale:"3",rotation:"300deg"});
+            gsap.from(".box2 .circle8", 1, {left:"90%",scale:"0.5",rotation:"1300deg"});
+            gsap.from(".box2 .circle9", 1, {left:"90%",scale:"0",rotation:"300deg"});
+            gsap.from(".box2 .circle10", 1, {left:"90%",skew:"30deg"});
+        });
+
+        //3
+
+        $(".btn3").click(function(){
+            gsap.to(".box3 .circle1", {duration: 2, left:"90%", rotationY: "300deg", ease: "power1.out"})
+            gsap.to(".box3 .circle2", {duration: 2, left:"90%", rotationY: "310deg", ease: "power2.out"})
+            gsap.to(".box3 .circle3", {duration: 2, left:"90%", rotationY: "320deg", ease: "power3.out"});
+            gsap.to(".box3 .circle4", {duration: 2, left:"90%", rotationY: "330deg", ease: "power4.out"});
+            gsap.to(".box3 .circle5", {duration: 2, left:"90%", rotationY: "340deg", ease: "back.out(1.7)"});
+            gsap.to(".box3 .circle6", {duration: 2, left:"90%", rotationY: "350deg", ease: "elastic.out(1, 0.3)"});
+            gsap.to(".box3 .circle7", {duration: 2, left:"90%", rotationY: "360deg", ease: "bounce.out"});
+            gsap.to(".box3 .circle8", {duration: 2, left:"90%", rotationY: "370deg", ease: "slow(0.7, 0.7, false"});
+            gsap.to(".box3 .circle9", {duration: 2, left:"90%", rotationY: "380deg", ease: "steps(12)"});
+        });
+
+        //4
+
+        $(".btn4").click(function(){
+            gsap.to(".box4 .circle1", {duration: 1, repeat:1, yoyo: true, left:"90%", rotation:"720deg", ease:"power4.out"})
+            gsap.to(".box4 .circle2", {duration: 1, repeat:2, yoyo: true, left:"90%", rotation:"720deg", ease:"power4.out"})
+            gsap.to(".box4 .circle3", {duration: 1, repeat:3, yoyo: true, left:"90%", rotation:"720deg", ease:"power4.out"})
+            gsap.to(".box4 .circle4", {duration: 1, repeat:4, yoyo: true, left:"90%", rotation:"720deg", ease:"power4.out"})
+            gsap.to(".box4 .circle5", {duration: 1, repeat:-1, yoyo: true, left:"90%", rotation:"720deg", ease:"power4.out"})
+        })
+
+        //5
+
+        $(".box5").css("height","400px");
+        $(".btn5").click(function(){
+            let tl = new TimelineMax();
+            tl.to(".box5 .circle1",{duration: 1, left: "90%", scale:"1", ease: "power2.out"})
+              .to(".box5 .circle1",{duration: 1, top: "80%",  scale:"0.5", ease: "power2.out"})
+              .to(".box5 .circle1",{duration: 1, left: "0",  scale:"2.5", ease: "power2.out"})
+              .to(".box5 .circle1",{duration: 1, top: "0",  scale:"1", ease: "power2.out"})
+        })
+
+        //6
+
+        const tw = gsap.to(".box6 .circle1", {duration: 1, left: "90%", borderRadius: "0%", rotation: "720deg" })
+        tw.pause();
+
+        $(".btn6").click(function(){
+            gsap.to(".box6 .circle1", {duration: 1, left: "90%", borderRadius: "0%", rotation: "720deg" })
+        });
+        $(".btn6-1").click(function(){ tw.play()});
+        $(".btn6-2").click(function(){ tw.pause()});
+        $(".btn6-3").click(function(){ tw.repeat()});
+        $(".btn6-4").click(function(){ tw.reverse()});
+        $(".btn6-5").click(function(){ tw.seek(0.5)});
+        $(".btn6-6").click(function(){ tw.timeScale(0.5)});
+        $(".btn6-7").click(function(){ tw.timeScale(2)});
+        $(".btn6-8").click(function(){ tw.kill()});
+        $(".btn6-9").click(function(){ tw.repeat()});
+
+        //7
+
+        $(".btn7-1").click(function(){
+            $(".btn7 .circle1").animate({ left: "90%"}, 1000, function(){
+                $(".btn7 .circle1").animate({ left: "0"}, 1000)
+            });
+        });
+
+        $(".btn7-2").click(function(){
+            gsap.to(".box7 .circle1",{duration:1, left: "90%", onComplete: com})
+        });
+
+        function com(){
+            gsap.to(".box7 .circle1",{duration:1, left: "0"})
+        }
+    </script>
 </body>
 
 </html>
