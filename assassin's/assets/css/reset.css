@@ -4,7 +4,7 @@ a:hover {color: #390;}
 .clearfix::before, .clearfix::after {content: ''; display: block; clear: both;}
 body, input, textarea, select, button, table {font-family: 'Noto Sans KR', sans-serif, AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color: #222; font-size: 13px; line-height: 1.5;}
 h1, h2, h3, h4, h5, h6 {font-size: 13px; color: #222; font-weight: normal;}
-li, ol, ul, menu {list-style: none;} 
+/* li, ol, ul, menu {list-style: none;} */
 img {border: 0 none; vertical-align: top; width: 100%;}
 svg {width: 100%;}
 em {font-style: normal;}

@@ -151,7 +151,7 @@
     align-items: center;
     justify-content: center;
     color: var(--swiper-navigation-color, var(--swiper-theme-color));
-    color: #fff;
+    color: #000;
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -168,7 +168,7 @@
     text-transform: none;
     font-variant: initial;
     line-height: 1;
-    color: #fff;
+    color: #000;
 }
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
@@ -190,7 +190,7 @@
 }
 .swiper-button-prev.swiper-button-white,
 .swiper-button-next.swiper-button-white {
-    --swiper-navigation-color: #ffffff;
+    --swiper-navigation-color: #000fff;
 }
 .swiper-button-prev.swiper-button-black,
 .swiper-button-next.swiper-button-black {
@@ -256,7 +256,7 @@
     height: 6px;
     display: inline-block;
     border-radius: 100%;
-    background: #fff;
+    background: #000;
     margin: 15px !important;
 }
 button.swiper-pagination-bullet {
@@ -275,7 +275,7 @@ button.swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     opacity: 1;
-    border: 2px solid #fff;
+    border: 2px solid #000;
     background: transparent;
     margin: 11px !important;;
 }
@@ -344,7 +344,7 @@ button.swiper-pagination-bullet {
     top: 0;
 }
 .swiper-pagination-white {
-    --swiper-pagination-color: #ffffff;
+    --swiper-pagination-color: #000fff;
 }
 .swiper-pagination-black {
     --swiper-pagination-color: #000000;
@@ -431,7 +431,7 @@ button.swiper-pagination-bullet {
     border-top-color: transparent;
 }
 .swiper-lazy-preloader-white {
-    --swiper-preloader-color: #fff;
+    --swiper-preloader-color: #000;
 }
 .swiper-lazy-preloader-black {
     --swiper-preloader-color: #000;

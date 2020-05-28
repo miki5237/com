@@ -22,8 +22,15 @@ body {
     background-size: cover;
     margin-bottom: 50px;
 }
-#banner {
-    height: 540px;
+#story {
+    position: relative;
+}
+#PORTFOLIO {
+    position: relative;
+}
+#pricing-table {
+    background: #f7f8fa;
+    height: auto;
 }
 
 /* 컨테이너 */
@@ -36,7 +43,6 @@ body {
     overflow: hidden;
     .nav-svg {
         padding: 0 20px;
-        float: left;
         display: inline-block;
         a {
             width: 100%;
@@ -44,9 +50,6 @@ body {
             display: inline-block;
             svg {
                 width: 60px; height: 60px;
-                g polyline {
-                    fill: #00b0fd;
-                }
             } 
         }
         
@@ -114,33 +117,228 @@ body {
         text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
         margin: 0 auto;
     }
+    animation: headerTranslate 1s forwards;
+}
+@keyframes headerTranslate {
+    0% {opacity: 0; transform: translateY(100px); transition: all 1.8s 1.6s ease;}
+    100% {opacity: 1; transform: translateY(0);}
 }
 
 /* 베너 */
 .banner {
     overflow: hidden;
     padding-top: 100px;
-    .img {
+    .banner-img {
         width: 30%;
         float: left;
         svg {
             width: 100%;
         }
     }
-    .text {
+    .banner-text {
         width: 70%;
         float: right;
         h2 {
             text-align: center;
-            font-size: 16px;
+            font-size: 24px;
+            margin-top: 80px;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 25px;
+        }
+    }
+    .banner-bto {
+        margin-top: 400px;
+        margin-left: 40%;
+        padding: 10px 0;
+        padding-bottom: 15px;
+        display: block;
+        border: 2px solid #ffd565;
+        text-align: center;
+        width: 18%;
+        &:hover {
+            .text {
+                color: #fff;
+            }
+            svg g path {
+                fill: #fff;
+            }
+            box-shadow:
+                inset -150px 0 0 0 #6b6b6b,
+                inset 150px 0 0 0 #6b6b6b;
+                transition: all 0.25s;
+        }
+        
+        svg {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+        .text {
+            font-size: 14px;
+            color: #000;
+            display: inline-block;
+        }
+    }
+    .box {
+        width: 300px;
+        height: 55px;
+        margin-left: 37%;
+        border-bottom: 1px solid #ebebeb;
+    }
+    margin-bottom: 30px;
+} 
+
+/* 소계 */
+.section-box {
+    width: 300px;
+    height: 55px;
+    margin: 50px 50px 50px 37%;
+    border-bottom: 1px solid #ebebeb;
+}
+.section-inner {
+    padding: 10px;
+    padding-bottom: 24px;
+    text-align: center;
+    font-size: 34px;
+}
+.section-inner-box {
+    border-top: 2px solid #000;
+    text-align: center;
+    width: 100px;
+    margin-left: 46%;
+    margin-bottom: 30px;
+}
+
+/* story */
+.story {
+    margin: 0 250px;
+    .story-img {
+        width: 250px;
+        margin-right: 50px;
+        float: left;
+        img {
+            width: 250px;
+        }
+    }
+    .story-text {
+        margin-top: 50px;
+        float: left;
+        width: 750px;
+        p {
+            font-size: 26px;
+        }
+        ul li {
+            font-size: 18px;
+            margin: 0 14px;
+        }
+    }
+}
+
+/* PORTFOLIO */
+.PORTFOLIO {
+    margin: 0 150px;
+    .PORTFOLIO-img {
+        width: 250px;
+        margin-right: 50px;
+        float: left;
+        img {
+            width: 250px;
+        }
+    }
+    .PORTFOLIO-text {
+        float: left;
+        width: 750px;
+        h3 {
+            font-size: 26px;
+        }
+        p {
+            font-size: 18px;
+            margin: 0 14px;
+        }
+    }
+    .PORTFOLIO-a {
+        display: block;
+        clear: both;
+        width: 80%;
+        height: 50px;
+        margin-top: 200px;
+        text-align: center;
+
+        a {
+            text-align: center;
+            padding: 10px 50px;
+            text-decoration: none;
+            color: #000;
+            border: 2px solid #6b6b6b;
+            &:hover {
+                color: #fff;
+                box-shadow:
+                inset -100px 0 0 0 #6b6b6b,
+                inset 100px 0 0 0 #6b6b6b;
+                transition: all 0.25s;
+            }
+        }
+    }
+}
+.PORTFOLIO-box {
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 50px;
+    margin: 80px 0;
+    text-align: center;
+    a {
+        text-align: center;
+        padding: 20px 40px;
+        text-decoration: none;
+        color: #000;
+        background: rgb(255, 213, 101);
+        border-radius: 50px;
+        font-size: 16px;
+        &:hover {
+            color: #000;
+            background: rgba(255, 213, 101, 0.5);
+            transition: all 0.25s;
         }
     }
 }
 
 
 
+/* pricing-table */
+.pricing-table {
+    margin: 30px 0 40px;
+    text-align: left;
+    height: 484px;
+    .section-inner {
+        line-height: 100px;
+    }
+    ul {
+        display: block;
+        list-style: none;
+        .three-table {
+            width: 32.5%;
+            max-width: 300px;
+            position: relative;
+            border-radius: 3px;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            z-index: 10;
+        }
+        .featured-plan {
+            margin: -24px -3px 0 -3px;
+            box-shadow: 0 0 35px 2px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
 /* 미디어쿼리 */
 
 @media (max-width:1220px){
-    .container {width: 100%;}
+    .container {width: 100%}
 }

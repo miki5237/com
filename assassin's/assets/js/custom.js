@@ -31,3 +31,29 @@ function hasScroll(){
   lastScrollTop = wScroll
   
 }
+
+/* story */
+var mySwiper1 = new Swiper ('#swiper1', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: 'true,'
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+})
+
+/* PORTFOLIO */
+var mySwiper2 = new Swiper ('#swiper2', {
+    loop: true,
+    pagination: {
+      el: '.pagination',
+      clickable: 'true,'
+    },
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+})
