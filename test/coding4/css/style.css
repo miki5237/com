@@ -1,0 +1,86 @@
+/* 리셋 */
+* {margin: 0; padding: 0;}
+a {text-decoration: none; color: #000;}
+li {list-style: none;}
+img {width: 100%;}
+em {font-style: normal; text-decoration: none;}
+
+/* 레이아웃 */
+#cot1 {overflow: hidden; margin-top: 420px;}
+#cot2 {margin-top: 30px; padding-bottom: 50px; border-bottom: 1px solid #d9d9d9;}
+#footer {margin-top: 30px; margin-bottom: 50px;}
+
+/* 컨테이너 */
+.cot {width: 960px; margin: 0 auto; background: #fff;}
+
+/* 네비게이션 */
+#nav {overflow: hidden;}
+
+#nav .nav-img {float: left;}
+#nav .nav-img img {width: 100px;}
+
+#nav .nav-text {float: right; margin-top: 20px;}
+#nav .nav-text ul {display: inline; text-align: right;}
+#nav .nav-text ul li {display: inline-block; margin-left: 10px;}
+
+.nav-text-bot {display: none;}
+
+/* 슬라이더다 이말이여! */
+.slider-wrap {
+    width: 960px;
+    overflow: hidden;
+    position: absolute; left: 50%; top: 30%;
+    transform: translate(-50%, -50%);
+}
+.slider-img {
+    position: relative;
+    width: 4800px;
+    overflow: hidden;
+}
+.slider-img .sliders {
+    float: left; width: 960px;
+}
+
+/*게시판이다 이말이여*/
+.cot-left {position: relative; float: left; width: 44%; height: 168px; border: 1px solid #d8d8d8; padding: 20px 3%;}
+.cot-left .cot-top li {display: inline; font-size: 14px;}
+.cot-left .cot-top li:nth-child(1)::after {content: " | ";}
+.cot-left .cot-top li a {color: #919191;}
+.cot-left .cot-top .ais {color: #000; font-size: 16px;}
+.cot-bot {margin-top: 20px; overflow: hidden;}
+.cot-bot li {margin: 10px 0; font-size: 14px;}
+.cot-bot li em {font-size: 14px; color: #7e7e7e; float: right;}
+.cot-left .bot {color: #919191; font-size: 12px; position: absolute; top: 20px; right: 40px;}
+.cot-left .bot img {width: 20px; position: absolute; margin-left: 5px;}
+
+/*온종일 혜택이다 이말이여*/
+.cot-right {width: 49%; height: 209px; float: right; position: relative;}
+.cot-right .cot-right-div {
+    display: none; position: absolute; width: 400px; height: 200px; top: 3%; left: -50%; background: #fff;
+    border: 1px solid #727272;
+}
+.cot-right .cot-right-div h2 {
+    color: #000; font-size: 16px;
+    margin-bottom: 50px;
+    margin-left: 40%;
+}
+.cot-right .cot-right-div p {
+    color: #919191; font-size: 14px;
+    text-align: center;
+}
+.cot-right .cot-right-div a {
+    border: 1px solid #7e7e7e;
+    position: absolute; top: 0; right: 0;
+}
+
+/*인생의 절반을 손해본 특별한 경험이여!*/
+.cot2-h1 {font-size: 16px; margin-bottom: 10px;}
+.cot2-img {width: 23.5%; display: inline-block; margin-left: 1.4%;}
+.cot2-img:nth-child(2) {margin: 0;}
+.cot2-img em {margin: 10px 0; font-size: 14px;}
+
+/*마! 임마! 이거 푸터다!*/
+.footer {font-size: 12px; color: #727272;}
+.footer li {margin-bottom: 5px;}
+.footer li em::after {content: " | "; margin: 0 10px; color: #727272;}
+.footer li:nth-child(3) {margin-top: 20px;}

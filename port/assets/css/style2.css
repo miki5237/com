@@ -1,0 +1,74 @@
+/* layout */
+#contents {}
+#section1 {
+    position: relative;
+    width: 100%;
+    height: 100vh; background: url(../img/header.jpg) no-repeat center center; 
+    background-size: cover;
+}
+#section1::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5B5B5B), to(rgba(151, 151, 151, 0)));
+    background: linear-gradient(180deg, #5B5B5B 0%, rgba(151, 151, 151, 0) 100%);
+}
+#section2 {
+    height: 1000px;
+}
+#section3 {}
+#section4 {}
+#section5 {}
+#section6 {}
+
+/* nav */
+#nav {
+    position: fixed;
+    z-index: 1000;
+    right: 0; top: 0;
+    width: 200px; height: 100vh;
+    background: #fff;
+}
+
+/* sec1 */
+.sec1 {
+    width: 100%; overflow: hidden;
+    height: 100vh;
+    position: relative; z-index: 10;
+}
+.sec1 h1 {
+    font-size: 3vw;
+    line-height: 1;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    color: #fff;
+    padding: 3vw;
+}
+.sec1 h1 em {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 2vw;
+    letter-spacing: 0.8vw;
+}
+.sec1 .bottom {
+    position: absolute; left: 0; bottom: -8vw;
+    white-space: nowrap;
+    font-size: 14vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #fff;
+}
+
+
+
+
+
+
+
+
+
+

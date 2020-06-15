@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* 폰트 */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 레이아웃 */
+#nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  width: 9vw;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  background: #FFFFFF;
+  border-left: 1px solid #075146;
+}
+
+#header {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+
+#banner {
+  width: 100vw;
+  height: 50vh;
+  background: #075140;
+}
+
+/* 헤더 */
+.header {
+  background: url(../img/header.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5B5B5B), to(rgba(151, 151, 151, 0)));
+  background: linear-gradient(180deg, #5B5B5B 0%, rgba(151, 151, 151, 0) 100%);
+}
+
+.header .Title {
+  position: absolute;
+  z-index: 100;
+}
+
+.header .Title h1 {
+  position: absolute;
+  position: relative;
+  left: 5.5vw;
+  top: 6vh;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3.9vw;
+  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.header .Title h1::before {
+  content: '';
+  position: absolute;
+  width: 7.1vw;
+  left: -0.3vw;
+  top: 8.7vh;
+  border-top: 0.2vh solid #FFFFFF;
+}
+
+.header .Title h1::after {
+  content: '';
+  position: absolute;
+  width: 16vw;
+  left: 7.5vw;
+  top: 8.7vh;
+  border-top: 0.2vh solid #FFFFFF;
+}
+
+.header .Title p {
+  position: absolute;
+  left: 5.5vw;
+  top: 14vh;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.9vw;
+  letter-spacing: 0.855em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=style.css.map */
