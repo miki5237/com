@@ -16,10 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="loading1"></div>
-    <div id="loading2"></div>
+    <!-- <div id="loading1"></div>
+    <div id="loading2"></div> -->
     
     <nav id="nav">
         <span>||</span>
@@ -31,50 +32,198 @@
     </nav>
     <!-- //nav -->
 
-    <section id="contents">
-        <section id="section1">
-            <div class="sec1">
-                <h1>portfolio <em>kimjaemin</em></h1>
-                <p class="bottom">portfolio portfolio portfolio</p>
-            </div>
-        </section>
-        <!-- //section1 -->
-        
-        <section id="section2">
-            <div class="sec2-Sid">
-                <div class="sec-img"></div>
-                <div class="sec-text">
-                    <p>P</p>
-                    <p>R</p>
-                    <p>O</p>
-                    <p>J</p>
-                    <p>E</p>
-                    <p>C</p>
-                    <p>T</p>
-                    <p>S</p>
-                </div>
-            </div>
-            <div class="sec2-top">
-                <p class="sec2-p">introduction</p>
-                <div class="sec2-a">
-                    <a href="#">SITEVIEW</a>
-                </div>
-            </div>
-            <div class="sec2-bot">
-                <p class="sec2-p">Blog</p>
-                <div class="sec2-a">
-                    <a href="#">SITEVIEW</a>
-                </div>
-            </div>
-        </section>
-        <!-- //section2 -->
+    <div class="pageYOffset"></div>
+    <!-- //pageYOffset -->
 
-        <section id="section3"></section><!-- //section3 -->
-        <section id="section4"></section><!-- //section4 -->
-        <section id="section5"></section><!-- //section5 -->
-        <section id="section6"></section><!-- //section6 -->
-    </section>
-    <!-- //contents -->
-    <script>history.scrollRestoration = "manual"</script>
+    <div id="wrap">
+        <section id="contents">
+            <section id="section1">
+                <div class="sec1">
+                    <h1>portfolio <em>kimjaemin</em></h1>
+                    <p class="bottom">portfolio portfolio portfolio</p>
+                </div>
+            </section>
+            <!-- //section1 -->
+
+            <section id="section2"
+                data-800="left:0vw"
+                data-10000="left:-500vw"
+            >
+                <section class="sec2">
+                    <div class="sec2-Sid">
+                        <div class="sec-img"></div>
+                        <div class="sec-text">
+                            <p>P</p>
+                            <p>R</p>
+                            <p>O</p>
+                            <p>J</p>
+                            <p>E</p>
+                            <p>C</p>
+                            <p>T</p>
+                            <p>S</p>
+                        </div>
+                        <div class="sec-arrow">
+                            <img src="assets/icon/sec-arrow.png" alt="다음">
+                        </div>
+                    </div>
+                    <div class="sec2-top">
+                        <p class="sec2-p">introduction</p>
+                        <div class="sec2-a">
+                            <a href="#">SITEVIEW</a>
+                        </div>
+                        <div class="sec-arrow">
+                            <img src="assets/icon/sec-top-arrow.png" alt="introduction">
+                        </div>
+                    </div>
+                    <div class="sec2-bot">
+                        <p class="sec2-p">Blog</p>
+                        <div class="sec2-a">
+                            <a href="#">SITEVIEW</a>
+                        </div>
+                        <div class="sec-arrow">
+                            <img src="assets/icon/sec-bot-arrow.png" alt="Blog">
+                        </div>
+                    </div>
+                </section>
+                <section class="sec3">
+                    <div class="sec3-h">
+                        <h1>웹 표준 사이트</h1>
+                        <h2>Webstandard</h2>
+                        <p>웹 표준은 월드 와이드 웹의 측면을 서술하고 정의하는 공식 표
+                            <br>준이나 다른 기술 규격을 가리키는 일반적인 용어이다. 최근에 
+                            <br>이 용어는 웹 사이트를 작성하는 데 중요도가 높아지고 있으며 
+                            <br>웹 디자인, 개발과 관계가 있다.</p>
+                    </div>
+                    <div class="sec3-bot">
+                        <ul>
+                            <li><a href="#">웹표준이란?</a></li>
+                            <li><a href="#">웹접근성이란?</a></li>
+                            <li><a href="#">IR 효과란?</a></li>
+                            <li><a href="#">이미지 스프라이트란?</a></li>
+                            <li><a href="#">스킵 메뉴?</a></li>
+                        </ul>
+                        <a class="sec3-bot-arrow" href="#">
+                            <span>see my site</span>
+                            <img src="assets/icon/sec3-bot-arrow.png" alt="사이트 바로가기">
+                        </a>
+                    </div>
+                    <div class="sec3-img"></div>
+                    <p class="sec3-side">Web standard site Web standard site Web standard site</p>
+                </section>
+                <section class="sec4">
+                    <div class="sec3-h">
+                        <h1>웹 반응형 사이트</h1>
+                        <h2>ReactiveWeb</h2>
+                        <p>반응형 웹 디자인(responsive web design, RWD)이란
+                            <br>하나의 웹사이트에서 PC, 스마트폰, 태블릿 PC 등 접속하는 디스 
+                            <br>플레이의 종류에 따라 화면의 크기가 자동으로 변하도록 만든
+                            <br>웹페이지 접근 기법을 말한다.</p>
+                    </div>
+                    <div class="sec3-bot">
+                        <ul>
+                            <li><a href="#">웹반응형이란?</a></li>
+                            <li><a href="#">미디어쿼리란?</a></li>
+                            <li><a href="#">폰트 어썸?</a></li>
+                            <li><a href="#">이미지 슬라이더?</a></li>
+                            <li><a href="#">라이트 박스란?</a></li>
+                        </ul>
+                        <a class="sec3-bot-arrow" href="#">
+                            <span>see my site</span>
+                            <img src="assets/icon/sec3-bot-arrow.png" alt="사이트 바로가기">
+                        </a>
+                    </div>
+                    <div class="sec3-img"></div>
+                    <p class="sec3-side">Reactive Web Site Reactive Web Site Reactive Web Site</p>
+                </section>
+                <section class="sec5">
+                    <div class="sec3-h">
+                        <h1>단체 기업 사이트</h1>
+                        <h2>enterprise</h2>
+                        <p>기업 웹 사이트는 쉽게 설명하자면 ‘고객들이 회사를 들여다보
+                            <br>는 창’이라고 할 수 있다. 온라인상에서 일종의 헤드쿼터 역할
+                            <br>을 하는 것이 기업의 웹 사이트라 할 수 있다. 최근 들어 실리콘
+                            <br>밸리의 잘 나가는 기업들인 애플, 구글, 페이스북, 엔비디아 등
+                            <br>이 가장 열을 올리는것이 새 본사 사옥 건설 경쟁이다.</p>
+                    </div>
+                    <div class="sec3-bot">
+                        <ul>
+                            <li><a href="#">기업사이트란?</a></li>
+                            <li><a href="#">숨겨진메뉴란?</a></li>
+                            <li><a href="#">패럴랙스?</a></li>
+                            <li><a href="#">탭메뉴란?</a></li>
+                            <li><a href="#">CSS 전처리기란?</a></li>
+                        </ul>
+                        <a class="sec3-bot-arrow" href="#">
+                            <span>see my site</span>
+                            <img src="assets/icon/sec3-bot-arrow.png" alt="사이트 바로가기">
+                        </a>
+                    </div>
+                    <div class="sec3-img"></div>
+                    <p class="sec3-side">group enterprise site group enterprise site group enterprise site</p>
+                </section>
+                <section class="sec6">
+                    <div class="sec3-h">
+                        <h1>개인 영화 사이트</h1>
+                        <h2>personalfilm</h2>
+                        <p>영화 사이트는 영화 정보를 모아서 멋지게 홍보하는 전통적인 
+                            <br>프로모션 웹사이트, 영화의 주제와 사용자 참여를 적당히 믹스
+                            <br>한 상호작용이 훌륭한 웹사이트,  등 다양한 개성의 영화 홍보 
+                            <br>목적의 사이트를 영화 사이트라고 합니다.</p>
+                    </div>
+                    <div class="sec3-bot">
+                        <ul>
+                            <li><a href="#">영화사이트란?</a></li>
+                            <li><a href="#">드롭다운 메뉴란?</a></li>
+                            <li><a href="#">입력필드란?</a></li>
+                            <li><a href="#">이미지 스프라이트란?</a></li>
+                            <li><a href="#">가상요소란?</a></li>
+                        </ul>
+                        <a class="sec3-bot-arrow" href="#">
+                            <span>see my site</span>
+                            <img src="assets/icon/sec3-bot-arrow.png" alt="사이트 바로가기">
+                        </a>
+                    </div>
+                    <div class="sec3-img"></div>
+                    <p class="sec3-side">personal film site personal film site personal film site</p>
+                </section>
+            </section>
+            <!-- //section2 -->
+            
+            <section id="section3">
+                <img src="assets/img/Webstandard@1200.jpg" alt="">
+            </section>
+            <!-- //section3 -->
+            <section id="section4"></section><!-- //section4 -->
+            <section id="section5"></section><!-- //section5 -->
+            <section id="section6"></section><!-- //section6 -->
+        </section>
+        <!-- //contents -->
+    </div>
+    <!-- wrap -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/pre.js"></script>
+    <script src="assets/js/skrollr.min.js"></script>
+    <script>
+        window.addEventListener("scroll", () => {
+            let pageYOffset = window.pageYOffset || document.documentElement.scrollTop;
+            document.querySelector(".pageYOffset").textContent = pageYOffset;
+        
+            if (pageYOffset >= document.querySelector("#section2").offsetTop){
+                document.querySelector("#section2").classList.add("show");  
+            } 
+            if (pageYOffset < 900){
+                document.querySelector("#section2").classList.remove("show");  
+            }
+        });
+        
+        //skrollr
+        var s = skrollr.init({
+            edgeStrategy: 'set',
+            easing: 'linear'
+        });
+    </script>
 </body>
 </html>

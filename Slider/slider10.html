@@ -181,13 +181,13 @@
             100% {transform-origin: right; transform: scaleX(0);}
         }
 
-        .slide-img .slide.s1 {background: #fcefe9;}
+        /* .slide-img .slide.s1 {background: #fcefe9;}
         .slide-img .slide.s2 {background: #e9effd;}
         .slide-img .slide.s3 {background: #fae3f5;}
         .slide-img .slide.s4 {background: #fbe368;}
         .slide-img .slide.s5 {background: #ccebea;}
         .slide-img .slide.s6 {background: #e9effd;}
-        .slide-img .slide.s7 {background: #f4f2ec;}
+        .slide-img .slide.s7 {background: #f4f2ec;} */
 
         /* slide-dot */
         .slide-dot {
@@ -212,6 +212,7 @@
             font-style: italic;
             vertical-align: 9px;
             font-size: 18px;
+            border: none;
         }
 
         /* slide-btn */
@@ -407,8 +408,9 @@
             currentIndex = 0,                   //현재 보이는 이미지
             dotIndex ="",                       //닷 버튼 html
             duration = 1000,                    //이미지 슬라이드 이동시간
-            easing = "easeOutExpo";             //이미지 움직임 효과
-            slideBg = ["#fcefe9","#e9effd","#fae3f5","#fbe368","#ccebea","#e9effd","#f4f2ec"];
+            easing = "easeOutExpo",            //이미지 움직임 효과
+            slideBg = ["#fcefe9","#e9effd","#fae3f5","#fbe368","#ccebea","#e9effd","#f4f2ec"],
+            cursor = $(".cursor");
 
             //글시 분할
             slide.each(function(){
@@ -433,7 +435,7 @@
         slide.each(function(i,e){
             // console.log(i,e)
             // $(this).css({"left":""+i+"00%"});
-            $(this).css({left: 100 * i + "%", backgroundColir : slideBg[i]});           //각 슬라이드 이미지 위치 설정
+            $(this).css({left: 100 * i + "%", backgroundColor : slideBg[i]});           //각 슬라이드 이미지 위치 설정
              
             dotIndex += "<a href='#'>0"+ (i+1) +"</a>"         //이미지 갯수만큼 닷버튼 만들기
         })
@@ -441,7 +443,7 @@
         //이미지 움직이기
         function gotoSlide(num){
                 slideImg.animate({left: -100 * num + "%"}, duration,easing);
-
+                cursor.css({backgroundColor : slideBg[num]});
                 currentIndex = num;
                 updateDot();
         }
@@ -489,8 +491,6 @@
         startTimer ();
 
         //마우스 따라가기
-        let cursor = $(".cursor");
-
         $(document).mousemove(function(e){ 
             $(".pageX").text(e.pageX);
             $(".pageY").text(e.pageY);
