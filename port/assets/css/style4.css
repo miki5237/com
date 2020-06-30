@@ -1,0 +1,832 @@
+/* Font */
+/* S-Core Dream */
+@font-face { font-family: 'S-CoreDream-1Thin'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S-CoreDream-2ExtraLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S-CoreDream-3Light'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S-CoreDream-4Regular'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S-CoreDream-5Medium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S-CoreDream-6Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S-CoreDream-7ExtraBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S-CoreDream-8Heavy'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S-CoreDream-9Black'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+/* 조선일보명조체라우! */
+@font-face { font-family: 'Chosunilbo_myungjo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+/* layout */
+#contents > section {position: relative;}
+#section1 {
+    z-index: 9000;
+    width: 100%;
+    height: 100vh; background: url(../img/header.jpg) no-repeat center center; 
+    background-size: cover;
+    overflow: hidden;
+}
+#section1::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5B5B5B), to(rgba(151, 151, 151, 0)));
+    background: linear-gradient(180deg, #5B5B5B 0%, rgba(151, 151, 151, 0) 100%);
+}
+#section2 {
+    z-index: 8000;
+    height: 600vh; 
+    background: #ffffff;
+}
+#section3 {
+    z-index: 7000;
+    background: #ffffff;
+}
+#section4 {
+    z-index: 6000;
+    height: 400vh;
+    background: #141414;
+}
+#section5 {z-index: 5000;}
+#section6 {z-index: 4000;}
+
+/* container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* pageYOffset */
+.pageYOffset {
+    position: fixed; right: 20px; top: 20px;
+    z-index: 10001;
+    color: #000;
+}
+
+/* nav */
+#nav {
+    position: fixed;
+    z-index: 10000;
+    right: 0; top: 0;
+    width: 10vw; height: 100vh;
+    background: #fff;
+    padding: 10vh 0;
+    background: #E4DEDB;
+    border-left: 1px solid #075146;
+}
+#nav ul {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    height: 80vh;
+}
+#nav li {
+    flex-basis: 25%;
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav li span {
+    display: block;
+    transform: rotate(90deg);
+}
+#nav li a {
+    font-size: 1.2vw;
+    color: #075146;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* sec1 */
+.sec1 {
+    width: 100%;
+    height: 100vh;
+    position: relative; z-index: 10;
+}
+.sec1 h1 {
+    font-size: 3vw;
+    line-height: 1;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    color: #fff;
+    padding: 3vw;
+}
+.sec1 h1 em {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 2vw;
+    letter-spacing: 0.8vw;
+}
+.sec1 .bottom {
+    position: absolute; left: 0; bottom: -8vw;
+    font-family: "Montserrat", sans-serif;
+    white-space: nowrap;
+    font-size: 14vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    animation: showreelAnimation linear infinite 8s;
+}
+@keyframes showreelAnimation {
+    0% {left: 0;}
+    100% {left: -92%;}
+}
+
+
+
+/* sec2 */
+.sec2 {
+    position: fixed; left: 0; top: 0;
+    width: 500vw; height: 100vh;
+    background: #E4DEDB;
+    overflow: hidden;
+}
+.sec2 > div {
+    float: left;
+    width: 100vw;
+    height: 100vh;
+}
+.sec2 > div {position: relative;}
+
+/* sec2-1 */
+.sec2-1 {
+    width: 100vw;
+    height: 100vh;
+    display: flex; 
+    flex-flow: column wrap;
+}
+.sec-top {
+    width: 65vw;
+    height: 50vh;
+    background: #075140;
+    position: relative;
+}
+.sec-bot {
+    width: 65vw;
+    height: 50vh;
+    background: #000;
+    position: relative;
+}
+.secLeft .sec-p {
+    position: absolute;
+    left: 5vw;
+    top: 13vh;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4vw;
+    text-transform: uppercase;
+
+    color: #000;
+}
+.sec-bot .sec-p {
+    color: #D7CAC4;
+}
+.secLeft .sec-a {
+    position: absolute;
+    left: 5vw;
+    top: 33vh;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4vw;
+    color: #000;
+}
+.sec-bot .sec-a {
+    color: #D7CAC4;
+}
+.secLeft .sec-arrow {
+    position: absolute;
+    left: 14vw;
+    top: 33.8vh;
+    width: 8vw;
+    height: 4vh;
+    z-index: 1000;
+}
+.sec-sid {
+    width: 35vw;
+    height: 100vh;
+    background: #E4DEDB;
+    position: relative;
+}
+.sec-sid .sec-img {
+    position: relative;
+    width: 33vw;
+    height: 88vh;
+    left: -18vw;
+    top: 9vh;
+    z-index: 10;
+
+    background: url(../img/jules.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec-sid .sec-text {
+    position: absolute;
+    left: 20vw;
+    top: 28vh;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2.5vw;
+    line-height: 6vh;
+
+    color: #075140;
+}
+.sec-sid .sec-arrow {
+    position: absolute;
+    width: 20vw;
+    height: 50vh;
+    left: 10vw;
+    top: 46.5vh;
+    z-index: 1000;
+}
+.sec-sid .sec-arrow img {
+    width: 40%;
+}
+
+/* sec-cot(sec2-2~sec2-5) */
+.sec-cot .sec-h h1 {
+    position: absolute;
+    left: 7.3vw;
+    top: 12vh;
+
+    font-family: 'S-CoreDream-6Bold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.7vw;
+    line-height: 118%;
+    color: #075140;
+}
+.sec-cot .sec-h h2 {
+    position: absolute;
+    left: 10.3vw;
+    top: 26vh;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 4.65vw;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #075140;
+}
+.sec-cot .tabCont p:nth-child(1) {
+    position: absolute;
+    left: 7.8vw;
+    top: 40vh;
+    font-family: 'Chosunilbo_myungjo';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2vw;
+    line-height: 159%;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+.sec-cot .sec-tab {
+    position: absolute;
+    width: 35vw;
+    left: 7.8vw;
+    top: 64vh;
+}
+.sec-cot ul li {
+    display: inline-block; 
+    margin: 0.8vh 0.2vw; 
+    border: 0.05vw solid #075146;
+    box-sizing: border-box;
+    padding: 1.5vh 1.4vw;
+}
+.sec-cot ul li a {
+    font-family: 'ChosunilboNM', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2vw;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #075146;
+}
+.sec-cot ul li.active {
+    background: #0B7464;
+    border: 0.05vw solid #0B7464;
+}
+.sec-cot ul li.active a {
+    color: #E4DEDB;
+}
+.sec-cot ul li:hover {
+    background: #0B7464;
+    border: 0.05vw solid #0B7464;
+}
+.sec-cot ul li:hover a {
+    color: #E4DEDB;
+}
+.sec-cot .sec-bot-arrow {
+    position: absolute;
+    left: 0.5vw;
+    top: 25vh;
+}
+.sec-cot .sec-bot-arrow span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1vw;
+    line-height: 118%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #075146;
+}
+.sec-cot .sec-bot-arrow img {
+    width: 14.5vw;
+    margin-left: 1vw;
+    margin-top: 0.5vh;
+}
+.sec-cot .tabCont .sec-img {
+    position: absolute;
+    width: 32vw;
+    height: 0vh;
+    left: 56.5vw;
+    top: 50vh;
+    z-index: 10;
+}
+.sec-cot.show .tabCont .sec-img {
+    animation: secImgShow 2s forwards;
+}
+@keyframes secImgShow {
+    0% {height: 0vh; top: 50vh;}
+    100% {height: 89vh; top: 5vh;}
+}
+.sec2-2 .tabCont .sec-img {
+    background: url(../img/Webstandard@1200.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec2-3 .tabCont .sec-img {
+    background: url(../img/ReactiveWeb@1200.jpg) no-repeat; 
+    background-size: cover;
+}
+.sec2-4 .tabCont .sec-img {
+    background: url(../img/enterprise@1200.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec2-5 .tabCont .sec-img {
+    background: url(../img/personalfilm@1200.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec-cot .sec-side {
+    font-family: 'Montserrat Subrayada';
+    margin-left: 21vw;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18vw;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgba(7, 81, 70, 0.2);
+    transform: rotate(-90deg);
+    animation: sec-side linear infinite 20s;
+}
+@keyframes sec-side {
+    0% {transform: translateY(0) rotate(-90deg);}
+    100% {transform: translateY(90vw) rotate(-90deg);}
+}
+
+/* 코드보기 */
+.line-container {
+    position: absolute;
+    width: 32vw;
+    height: 89vh;
+    left: 56.5vw;
+    top: 5vh;
+    z-index: 10;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2), 0px 20px 30px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(0, 0, 0, 0.7);
+    border-radius: 0.5%;
+}
+.line-numbers {
+    height: 81vh;
+}
+.address {
+    width: 100%;
+    height: 8vh;
+    z-index: 20;
+    background: #000;
+}
+.addressTop {
+    height: 4.2vh;
+    background: linear-gradient(180deg, #DFE1E5 0.6%, #DFE1E5 99.4%);
+}
+.addressTop .contro:nth-child(1){
+    position: absolute;
+    left: 0.8vw;
+    top: 1.4vh;
+    width: 12.5px;
+    height: 12.5px;
+
+    background: #ED6A5E;
+    border: 0.5px solid #CE5347;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 6px #EC6D62;
+    border-radius: 50%;
+}
+.addressTop .contro:nth-child(2){
+    position: absolute;
+    left: 1.8vw;
+    top: 1.4vh;
+    width: 12.5px;
+    height: 12.5px;
+
+    background: #F6BE4F;
+    border: 0.5px solid #D6A243;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 6px #F5C451;
+    border-radius: 50%;
+}
+.addressTop .contro:nth-child(3){
+    position: absolute;
+    left: 2.8vw;
+    top: 1.4vh;
+    width: 12.5px;
+    height: 12.5px;
+
+    background: #62C554;
+    border: 0.5px solid #58A942;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 6px #68CC58;
+    border-radius: 50%;
+}
+.addressBot {
+    height: 3.8vh;
+    background: #fff;
+    border-bottom: 0.1vh solid #B6B6B6;
+    position: relative;
+    z-index: 1000;
+}
+.addressBot .pre-nem .pre-arrow-icon {
+    position: absolute;
+    top: -3vh; left: 4.6vw;
+    width: 19.1px;
+    z-index: 10;
+}
+.addressBot .pre-nem p {
+    position: absolute;
+    font-family: "S-Core Dream";
+    top: -3vh; left: 6vw;
+    z-index: 10;
+    font-size: 11.52px;
+    text-transform: none;
+    color: #3D4043;
+}
+.addressBot .pre-nem .pre-arrow-Nemocan {
+    position: absolute;
+    top: -30px; left: 3.8vw;
+    width: 230px;
+    height: 32px;
+}
+.addressBot .pre-nem .pre-arrow-plus {
+    position: absolute;
+    top: -2.2vh; left: 310px;
+    width: 9.5px;
+}
+.addressBot .pre-img .pre-arrow-Left {
+    position: absolute;
+    top: 1vh;
+    width: 13.4px;
+    left: 0.8vw;
+}
+.addressBot .pre-img .pre-arrow-right {
+    position: absolute;
+    top: 1vh;
+    width: 13.4px;
+    left: 2.4vw;
+}
+.addressBot .pre-img .pre-arrow-back {
+    position: absolute;
+    top: 1vh;
+    width: 13.4px;
+    left: 4.2vw;
+}
+.addressBot .pre-tex {
+    position: absolute;
+    top: 0.5vh;
+    left: 5.9vw;
+    width: 75%;
+    height: 2.7vh;
+    border-radius: 14px;
+    background: #F1F3F4;
+}
+.addressBot .pre-tex .pre-arrow-lock{
+    position: absolute;
+    top: 0.7vh;
+    left: 0.5vw;
+    width: 7.6px;
+}
+.addressBot .pre-tex .pre-arrow-Menu{
+    position: absolute;
+    top: 0.6vh;
+    left: 104%;
+    width: 2.8px;
+}
+.addressBot .pre-tex p{
+    position: absolute;
+    left: 1.3vw;
+    top: 0.4vh;
+    text-transform: none;
+    font-size: 0.6vw;
+    color: #767676;
+}
+
+
+/* sec3 */
+.sec3 { 
+    padding-right: 10vw;
+    padding-top: 20vh;
+    position: relative;
+}
+.sec3 .title h3 {
+    text-align: center;
+    font-size: 8vw;
+    color: #075146;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.sec3 .title .arrow {
+    position: absolute;
+    width: 90.96px;
+    left: 40%;
+    top: 90%;
+}
+.sec3Cont {
+    background: #075146;
+    height: 600vh;
+    margin-top: 50vh;
+}
+.Subt {
+    padding-top: 25vh;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4vw;
+    line-height: 11vh;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.leftCont {
+    display: flex;
+    margin-top: 10vh;
+}
+.leftCont.ic3 {
+    display: block;
+    margin-top: -30vh;
+}
+.leftCont #loading{
+    width: 35vw;
+    height: 50vh;
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    position: relative;
+}
+.leftCont p {
+    font-family: "S-CoreDream-4Regular";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.2vw;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-left: 2vw;
+}
+.leftContBot {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    line-height: 5vh;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: relative;
+    display: block;
+}
+.leftContBot img {
+    position: absolute;
+    top: 1vh;
+    left: 11%;
+    width: 27vw;
+}
+.rightCont {
+    position: relative;
+    width: 25vw;
+    height: 40vh;
+    top: -10vh;
+    left: 45vw;
+}
+.rightCont iframe {
+    width: 100%;
+    height: 40vh;
+}
+.rightCont .leftContBot img {
+    width: 17vw;
+    top: 0.5vh;
+    left: 31%;
+}
+.rightCont p {
+    font-family: "S-CoreDream-4Regular";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.2vw;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+.ic3 p {
+    margin: 0;
+}
+
+/* sec4 */
+.sec4 {
+    position: fixed; left: 0; top: 0;
+    width: 350vw; height: 100vh;
+    background: #141414;
+    overflow: hidden;
+}
+.sec4 > div {
+    float: left;
+    height: 100vh;
+}
+.sec4 > div {position: relative;}
+
+/* secTit */
+.sec4 .secTit {
+    position: relative;
+    width: 90vw;
+}
+.sec4 .secTit .tit {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 180px;
+    line-height: 90vh;
+    text-align: center;
+    color: #FFFFFF;
+}
+.sec4 .secTit img {
+    position: absolute;
+    top: 40vh;
+    left: 80vw;
+    width: 15vw;
+}
+
+/* secLis */
+.sec4 .secLis {
+    position: relative;
+    width: 60vw;
+}
+.sec4 .secLis ul {
+    position: absolute;
+    right: 5vw;
+    -webkit-box-orient: vertical;
+    height: 100vh;
+    margin-top: -200vh;
+}
+.sec4 .secLis li {
+    margin-bottom: 0.375em;
+}
+.sec4 .secLis li input {
+    position: absolute;
+    left: -9999px;
+}
+.sec4 .secLis li.active {
+    background-color: rgba(228, 222, 219, 0.2);
+    -webkit-text-fill-color: #fff;
+}
+.sec4 .secLis li.active:before {
+    box-shadow: inset 0 0 0 0.25em #ffffff;
+}
+.sec4 .secLis li {
+    display: block;
+    padding: 0.6vh 1.8vw;
+    border-radius: 99em;
+    transition: 0.5s ease;
+
+    font-family: "S-CoreDream-6Bold";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4vw;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.05vw #fff;
+}
+.sec4 .secLis li:nth-child(1) {
+    letter-spacing: 0.7vw;
+}
+.sec4 .secLis li:nth-child(2) {
+    letter-spacing: 4vw;
+}
+.sec4 .secLis li:nth-child(3) {
+    letter-spacing: 0.7vw;
+}
+.sec4 .secLis li:nth-child(4) {
+    letter-spacing: 1.4vw;
+}
+.sec4 .secLis li:nth-child(5) {
+    letter-spacing: 2.4vw;
+}
+.sec4 .secLis li:nth-child(6) {
+    letter-spacing: 2vw;
+}
+.sec4 .secLis li:hover {
+    background-color: rgba(228, 222, 219, 0.2);
+}
+.sec4 .secLis li:before {
+    float: right;
+    content: "";
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin-top: 2.5%;
+    transition: 0.25s ease;
+    box-shadow: inset 0 0 0 0.1em #ffffff;
+}
+.sec4 .secLis.show ul{
+    animation: secLis 2s forwards;
+}
+@keyframes secLis {
+    0% {margin-top: -200vh;}
+    100% {margin-top: 0vh;}
+}
+
+/* secCot */
+.sec4 .secCot {
+    position: relative;
+    width: 80vw;
+    left: 0;
+}
+.sec4 .secCot #loading {
+    margin-top: 20vh;
+    width: 60vw;
+    height: 60vh;
+    overflow: hidden;
+}
+.sec4 .secCot #loading .slider-img {
+    position: relative;
+    width: 180vw; height: 60vh;
+    overflow: hidden;
+}
+.sec4 .secCot #loading .slider-img .sliders {
+    float: left; width: 60vw;
+}
+.sec4 .secCot #loading .slider-img .s2 img {
+    margin-top: -50%;
+}
+.sec4 .secCot .Cot p {
+    font-family: 'Chosunilbo_myungjo';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2vw;
+    line-height: 159%;
+    color: #FFFFFF;
+    margin-top: 1vh;
+    position: relative;
+}
+.sec4 .secCot .Cot a {
+    position: absolute;
+    top: 82vh;
+    right: 20vw;
+    color: #fff;
+
+    font-family: "S-CoreDream-2ExtraLight";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.2vw;
+    line-height: 118%;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

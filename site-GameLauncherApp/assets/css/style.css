@@ -1,0 +1,395 @@
+/* container */
+.container {
+    width: 100%; margin: 0 auto;
+    max-width: 1000px;
+}
+
+/* row */
+.row {position: relative; margin: 0 20px;}
+
+/* gradient */
+#gradient { 
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(180deg, #C64D60 0%, #BD7C44 100%), #BD7A45;
+}
+
+/* header */
+#header nav {
+    height: 10vh;
+    display: flex;
+}
+#header nav > div {
+    margin-top: auto;
+}
+#header nav .Menu {
+    margin-right: auto;
+    flex-basis: 7%;
+}
+#header nav .Speaker {
+    margin-left: 75%;
+    flex-basis: 5%;
+}
+#header nav .Discord {
+    margin-left: auto;
+    flex-basis: 4.5%;
+}
+#header .title {
+    padding: 5% 0;
+}
+#header .title .active {
+    font-family: "SF Pro 6Display";
+    font-style: normal;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #FBF9FB;
+}
+#header .maine {
+    width: 100%;
+    padding: 6% 5%;
+    background: #CD7C78;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    box-sizing: border-box;
+    display: flex;
+}
+#header .maine .img {
+    flex-basis: 30%;
+    margin-right: auto;
+}
+#header .maine .text {
+    flex-basis: 65%;
+    margin-left: auto;
+    position: relative;
+}
+#header .maine .text li:nth-child(1) {
+    font-family: "SF Pro 4Display";
+    font-style: normal;
+    font-size: 1.6vw;
+    color: #FEF7F6;
+    position: absolute;
+    left: 0; top: 0;
+}
+#header .maine .text li:nth-child(2) {
+    font-family: "SF Pro 6Display";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.2vw;
+    color: #FEF7F6;
+    position: absolute;
+    left: 0; top: 20%;
+}
+#header .maine .text li:nth-child(3) {
+    font-family: "SF Pro 4Display";
+    font-style: normal;
+    font-size: 1.6vw;
+    color: #FEF7F6;
+    position: absolute;
+    left: 0; bottom: 20%;
+}
+#header .maine .text li:nth-child(4) {
+    font-family: "SF Pro 6Display";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.2vw;
+    color: #FEF7F6;
+    position: absolute;
+    left: 0; bottom: 0;
+}
+#header .maine .text .Steam {
+    position: absolute;
+    width: 5vw;
+    right: 0;
+    top: 0;
+}
+#header .bot {
+    width: 100%;
+    margin: 4% 0;
+    padding: 4% 5%;
+    box-sizing: border-box;
+    background: rgba(196, 196, 196, 0.2);
+    border-radius: 10px;
+    display: flex;
+}
+#header .bot .text {
+    flex-basis: 75%;
+    margin-right: auto;
+}
+#header .bot .text p {
+    height: 100%;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2vw;
+    display: flex;
+    align-items: center;
+    color: #FEF7F6;
+}
+#header .bot .img {
+    flex-basis: 15%;
+    margin-left: auto;
+}
+#header .reco p {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2vw;
+    color: #FEF7F6;
+    margin-bottom: 3%;
+}
+#header .reco .swiper-container {
+    width: 100%;
+}
+#header .reco .swiper-container .swiper-slide {
+    display: flex;
+    margin-left: 2%; 
+}
+#header .reco .swiper-container .swiper-slide .text {
+    position: absolute;
+    bottom: 15%;
+    left: 35%;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.6vw;
+    line-height: 100%;
+    text-align: center;
+    color: #FEF7F6;
+}
+#header .reco .swiper-container .s3 .text {
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+}
+#header .reco .swiper-container .s4 .text {
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+}
+#header .reco .swiper-container .s1 {
+    flex-basis: 5%;
+    margin-left: 0;
+    border-radius: 0px 2px 2px 0px;
+}
+#header .reco .swiper-container .s2 {
+    flex-basis: 20%;
+    background: rgba(196, 196, 196, 0.4);
+    padding-bottom: 11%;
+    border-radius: 5px;
+}
+#header .reco .swiper-container .s3 {
+    flex-basis: 20%;
+    background: rgba(196, 196, 196, 0.4);
+    padding-bottom: 11%;
+    border-radius: 5px;
+}
+#header .reco .swiper-container .s4 {
+    flex-basis: 20%;
+    background: rgba(196, 196, 196, 0.4);
+    padding-bottom: 11%;
+    border-radius: 5px;
+}
+#header .reco .swiper-container .s5 {
+    flex-basis: 46%;
+    border-radius: 5px 0px 0px 5px;
+}
+#header .playTime p {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2vw;
+    color: #FEF7F6;
+    margin: 3% 0;
+}
+#header .playTime img {
+    position: relative;
+}
+#header .Gamer {
+    position: relative;
+}
+#header .Gamer p {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2vw;
+    color: #FEF7F6;
+    margin: 3% 0;
+}
+#header .Gamer img {
+    width: 80%;
+    margin: 10%;
+}
+#header .Gamer a {
+    position: absolute;
+    right: -8%; top: 0;
+    display: flex;
+}
+#header .Gamer a span {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #FEF7F6;
+}
+#header .Gamer a img {
+    width: 10%;
+}
+#header .youTube p {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2vw;
+    color: #FEF7F6;
+    margin: 3% 0;
+}
+#header .youTube a {
+    position: absolute;
+    top: 0; right: 0;
+    width: 2.5%;
+}
+#header .youTube img {
+    position: relative;
+    width: 100%;
+}
+#header .youTube .text p {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4vw;
+    line-height: 100%;
+    color: #FEF7F6;
+}
+#header .youTube .text span {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.5vw;
+    color: #FEF7F6;
+}
+#header .youTube .text span em {
+    margin-left: 3vw;
+}
+#header .youTube .text a {
+    position: absolute;
+    right: 20px;
+    top: 65%;
+    display: flex;
+}
+#header .youTube .text a img {
+    margin-right: 100%;
+    padding: 40% 0; 
+    width: 200%;
+}
+#header .youTube .text a span {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.5vw;
+    color: #FEF7F6;
+}
+#header .youTube .text {
+    position: relative;
+    padding: 6% 0;
+}
+#header .youTube .text::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 1%;
+    background: rgba(255, 255, 255, 0.4);
+}
+#header .dailyGameRank p {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4vw;
+    color: #FEF7F6;
+    margin: 3% 0;
+    padding: 8% 0 4% 0;
+    position: relative;
+}
+#header .dailyGameRank {
+    overflow: hidden;
+}
+#header .dailyGameRank .Tp {
+    width: 50%;
+    margin-left: 10%;
+    float: left;
+}
+#header .dailyGameRank .Tp p {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2vw;
+    color: #FEF764;
+    text-align: center;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+#header .dailyGameRank .Tp img {
+    width: 30%;
+    padding: 0 35%;
+}
+#header .dailyGameRank .img {
+    width: 30%; float: left;
+    margin: 0 5%;
+}
+#header .dailyGameRank .img div {
+    width: 10%; height: 2px;
+    margin: 30% auto;
+    background: #FFFFFF;
+}
+#header .dailyGameRank .img p {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8vw;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+#header .dailyGameRank a {
+    position: absolute;
+    top: 0; right: 0;
+    padding: 5% 0;
+    width: 2.5%;
+}
+#header .advertising {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 2% 0;
+    background: rgba(196, 196, 196, 0.2);
+}
+#header .advertising img {
+    width: 15%;
+    float: left;
+}
+#header .advertising p {
+    float: left;
+    margin-left: 5%;
+    margin-top: 2%;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4vw;
+    color: #FFFFFF;
+}
+#header .advertising p img {
+    width: 15%; margin-right: 3%;
+}
+#header .advertising em {
+    float: left;
+    margin-left: 5%;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3vw;
+    color: rgba(255, 255, 255, 0.6);
+}
+#header .advertising a {
+    position: absolute;
+    top: 10%; right: 0;
+    width: 20%;
+}

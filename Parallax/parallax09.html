@@ -429,6 +429,10 @@
                 }
             });
         });
+        window.addEventListener("scroll", () => {
+            let pageYOffset = window.pageYOffset || document.documentElement.scrollTop;
+            document.querySelector(".pageYOffset").textContent = Math.floor(pageYOffset);
+        });
         /* 소스보기 */
         $(".infor4 a").click(function(){
             $(".infor4 .modal").addClass("show");
