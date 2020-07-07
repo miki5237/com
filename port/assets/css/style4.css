@@ -657,7 +657,7 @@
 /* sec4 */
 .sec4 {
     position: fixed; left: 0; top: 0;
-    width: 350vw; height: 100vh;
+    width: 310vw; height: 100vh;
     background: #141414;
     overflow: hidden;
 }
@@ -841,7 +841,140 @@
     padding-top: 300vh;
     position: relative;
 }
+.sec5 h2{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 5.5vw;
+    line-height: 118%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 0.15vw #075146
+}
+.sec5 .sec5-cont{ 
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    height: 180vh;
+    width: 100%;
+    margin-top: 10vh;
+}
+.sec5 .sec5-cont div{ 
+    width: 32%;
+    margin-bottom: 2%;
+    background: #000;
+    overflow: hidden;
+    position: relative;
+}
+.sec5 .sec5-cont div:nth-child(1) {height: 40vh;}
+.sec5 .sec5-cont div:nth-child(2) {height: 60vh;}
+.sec5 .sec5-cont div:nth-child(3) {height: 80vh;}
+.sec5 .sec5-cont div:nth-child(4) {height: 50vh;}
+.sec5 .sec5-cont div:nth-child(5) {height: 50vh;}
+.sec5 .sec5-cont div:nth-child(6) {height: 50vh;}
+.sec5 .sec5-cont div:nth-child(7) {height: 80vh;}
+.sec5 .sec5-cont div:nth-child(8) {height: 60vh;}
+.sec5 .sec5-cont div:nth-child(9) {height: 40vh;}
+.sec5 .sec5-cont div:nth-child(3n+1) {order:1}
+.sec5 .sec5-cont div:nth-child(3n+2) {order:2}
+.sec5 .sec5-cont div:nth-child(3n) {order:3}
 
+.sec5 .sec5-cont div .img {
+    width: 100%; height: 100%;
+    animation: sec5Cont1 .5s forwards;
+}
+@keyframes sec5Cont1 {
+    0% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+.sec5 .sec5-cont div:nth-child(1) .img {
+    background: url(../img/me@1200.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec5 .sec5-cont div:nth-child(2) .img {
+    background: url(../img/Fix@1200.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec5 .sec5-cont div:nth-child(3) .img {
+    background: url(../img/HighSchool@1200.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec5 .sec5-cont div:nth-child(4) .img {
+    background: url(../img/dotcom@1200.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec5 .sec5-cont div:nth-child(5) .img {
+    background: url(../img/StudyingJQuery@1200.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec5 .sec5-cont div:nth-child(6) .img {
+    background: url(../img/LineComputerArtAcademy@1200.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec5 .sec5-cont div:nth-child(7) .img {
+    background: url(../img/WorkingPicture@1200.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec5 .sec5-cont div:nth-child(8) .img {
+    background: url(../img/Pygma@1200.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec5 .sec5-cont div:nth-child(9) .img {
+    background: url(../img/TISTORY@1200.jpg) no-repeat center center; 
+    background-size: cover;
+}
+.sec5 .sec5-cont div:hover .img {
+    animation: sec5Cont .5s forwards;
+}
+@keyframes sec5Cont {
+    0% {transform: scale(1);}
+    100% {transform: scale(1.2);}
+}
+.sec5 .sec5-cont div .text {
+    position: absolute;
+    overflow: hidden;
+    bottom: 10%;
+    left: 10%;
+    width: 80%;
+    height: 10vh;
+    background: rgb(7, 81, 70, .8);
+    opacity: 0;
+}
+.sec5 .sec5-cont div .text span {
+    position: absolute;
+    left: 0;
+    font-family: 'Chosunilbo_myungjo';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vw;
+    line-height: 10vh;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+.sec5 .sec5-cont div .text span a {
+    font-family: 'Chosunilbo_myungjo';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2vw;
+    line-height: 6vh;
+    color: #FFFFFF;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+.sec5 .sec5-cont div:hover .text {
+    opacity: 1; transition-duration: .5s;
+}
+.sec5 .sec5-cont div:hover .text span {
+    animation: sec5ContText linear infinite 120s .5s;
+}
+@keyframes sec5ContText {
+    0% {transform: translateX(0vw);}
+    100% {transform: translateX(-1000vw);}
+}
 
 
 
