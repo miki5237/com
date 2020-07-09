@@ -1,131 +1,117 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect06</title>
+    <title>Mouse Effect07</title>
+
     <link rel="stylesheet" href="assets/css/pre.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-
-        @font-face {
-            font-family: 'GmarketSansMedium';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
+        @font-face { 
+            font-family: 'GmarketSansMedium'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; 
         }
-        @font-face { font-family: 'S-CoreDream-2ExtraLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff'); font-weight: normal; font-style: normal; }
-        * {margin: 0;padding: 0;box-sizing: border-box;}
-        a {text-decoration: none;color: #666;}
-        img {width: 100%; vertical-align: top;}
+        @font-face { 
+            font-family: 'KCC-eunyoung'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff'); font-weight: normal; font-style: normal; 
+        }
+        @font-face { 
+            font-family: 'NotoSerifKR'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff'); font-weight: normal; font-style: normal; 
+            }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        a {text-decoration: none; color: #666;}
+        img {width: 100%; vertical-align: top;}        
         ul {padding: 10px 20px;}
         body {
-            background: url(assets/img/photo.jpg) no-repeat center center;
+            background: url(assets/img/tiqrrhfflsn.jpg) no-repeat center center;
             background-size: cover;
-            font-family: 'Abel', 'GmarketSansMedium';
+            font-family: 'NotoSerifKR'; 
             color: #fff;
             height: 100vh;
-            transition: all 0.2s;
-            /* cursor: none; */
             overflow: hidden;
+            cursor: none;
         }
         body::before {
             content: '';
             position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(215, 120, 194, 0.8);
+            left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(0, 0, 0);
             z-index: -1;
         }
-        .info {position: absolute; left: 0; top: 0; z-index: 1000;padding: 20px;}
-        .info p { margin-top: 10px;}
+        .info {
+            font-family: 'NotoSerifKR'; 
+            position: absolute; left: 0; top: 0; z-index: 1000;
+            padding: 20px;
+            font-size: 18px;
+        }
+
         /* info2 */
         .info2 {
             position: absolute; right: 0; top: 0; z-index: 1000;
-            padding: 30px;
-            font-weight: bold;
+            padding: 30px; font-weight: bold;
         }
-        .info2 li {list-style: none;margin-bottom: 5px;}
-        .info2 li a{color: #fff;}
+        .info2 li {list-style: none; margin-bottom: 5px;}
+        .info2 li a {color: #fff;}
         .info2 li.active a {border-bottom: 1px dashed #fff;}
-        /* infor3 */
-        .infor3 {
-            position: absolute; right: 0; bottom: 0; z-index: 1000;
-            padding: 30px;
-            font-weight: bold;
-        }
-        .infor3 li a{color: #fff;}
-        .infor3 li.active a {border-bottom: 1px dashed #fff;}
 
-        .cOpne {position: absolute; left: 0; bottom: 0; z-index: 1000; padding: 20px;}
-        .cOpne a {color: #fff; border: 1px solid #fff; border-radius: 30px; padding: 5px 30px}
-        .cOpne .modal {
+         /*  info3 */
+        .info3 {position: absolute; left: 0; bottom: 0; z-index: 1000; padding: 20px;}
+        .info3 a {color: #fff; border: 1px solid #fff; border-radius: 30px; padding: 5px 30px}
+        .info3 .modal {
             background: rgba(0,0,0,0.8);
             width: 100%;
             height: 100vh;
+            margin: 0;
+            padding: 0;
             position: fixed;
             top: 100%;
             left: 0;
             text-align: left;
             transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
         }
-        .cOpne .modal.show {
+        .info3 .modal.show {
             top: 0;
         }
-        .cOpne .modal .close {
+        .info3 .modal .close {
             position: absolute; right: 10px; top: 20px;
         }
+
         /* contents */
         .contents {
+            font-family: 'KCC-eunyoung';
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%; height: 100vh;
+            width: 100%; height: 100%;
+            text-align: center;
             flex-direction: column;
-            position: relative;
-        }
+        }     
         .cursor {
-            position: fixed;
-            width: 200px;
-            height: 200px;
-            background: #fff;
+            position: absolute;
+            width: 200px; height: 200px;
             border-radius: 50%;
-            z-index: 1000;
+            background: #fff;
+            z-index: -1;
             user-select: none;
             pointer-events: none;
-            transform: scale(1);
-            transition: transform 0.3s ease-in-out;
-            color: #fff;
-            box-sizing: content-box;
-            background: url(assets/img/photo.jpg) no-repeat center center;
+            background: url(assets/img/tiqrrhfflsn.jpg) no-repeat center center fixed;
+            background-size: cover;
         }
-        .mtext {
-            font-size: 2vw;
-            position: absolute;
-            left: 50%; bottom: 50%;
-            width: 40vw;
-            height: 15vw;
-            transform: translate3d(-50%, 68%, 150px); 
-            text-align: center;
-            border-radius: 1px;
-        }
-        /* .mtext .word{
-            text-shadow: 10px 10px 0 rgba(255,255,255,0.7),
-                        10px -10px 0 rgba(255, 166, 166, 0.7),
-                        -10px 10px 0 rgba(255, 136, 0, 0.7),
-                        -10px -10px 0 rgba(251, 255, 0, 0.7);
-        } */
+        .code-editor {height: auto;}
+        .close {cursor: pointer;}
+        /* move-image */
+        .move-image .mtext {font-size: 8vw; line-height: 1.7;}
     </style>
-
 </head>
 <body>
     <div class="info">
         <h1>Mouse Effect07</h1>
         <p>마우스 따라다니기</p>
     </div>
-
     <div class="info2">
         <ul>
             <li><a href="mouse01.html">Mouse01</a></li>
@@ -135,10 +121,10 @@
             <li><a href="mouse05.html">Mouse05</a></li>
             <li><a href="mouse06.html">Mouse06</a></li>
             <li class="active"><a href="mouse07.html">Mouse07</a></li>
+            <li><a href="mouse08.html">Mouse08</a></li>
         </ul>
     </div>
-
-    <div class="cOpne">
+    <div class="info3">
         <a href="#" class="view">소스보기</a>
         <!-- modal -->
         <div class="modal">
@@ -146,42 +132,72 @@
                 <span class="control"></span>
                 <span class="control"></span>
                 <span class="control"></span>
-<pre class="line-numbers"><code class="language-js">       
+<pre class="line-numbers"><code class="language-js">/* contents */
+.contents {
+    font-family: 'KCC-eunyoung';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; height: 100%;
+    text-align: center;
+    flex-direction: column;
+}     
+.cursor {
+    position: absolute;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+    background: url(img/photo04.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
 </code></pre>    
             </div>
-            <a class="close">Close</a>
+            <a class="close">닫기</a>
         </div>
-    </div>
-    <!---contents-->
-    
-
+    </div>    
+    <!-- contents -->
     <div class="contents">
+        <div class="cursor"></div> 
         <div class="move-image">
-            <!-- <div class="mimg">
-                <img class="img" src="juan-ordonez-MciiCsnl6rY-unsplash.jpg"></div> -->
             <div class="mtext">
-                <p>The die is cast.</p>
-                <p>주사위는 던져졌다.</p>
+                얼른 취업하자
             </div>
         </div>
-    </div>
+    </div>   
 
-    <!-- contents -->
-    <div class="cursor"></div>
-
-
-    <!-- script -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.min_1.12.4.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/pre.js"></script>
     <script>
-        const cursor = document.querySelector(".cursor")
-        document.addEventListener("mouseover",function(e){
-            let w = e.pageX
-            let h = e.pageY
+        const cursor = document.querySelector(".cursor");
 
-            gasp.to(cursor, 0.3, {left: w, top: h});
+        //마우스 커서 이동 - 제이쿼리
+       /*  $(window).mousemove(function(e){
+            gsap.to(".cursor", .2, {left: e.pageX-100, top: e.pageY-100})
+        }) */
+
+        //원의 크기를 구해서 반지름 값을 변수화
+        let width = cursor.offsetWidth;
+        let height = cursor.offsetHeight;
+        let rect = cursor.getBoundingClientRect();
+        
+        console.log(rect.width)
+
+        //마우스 커서 이동 - 자바스크립트
+        document.addEventListener("mousemove", function(e) {
+            gsap.to(cursor, .2, {left: e.pageX-rect.width/2, top: e.pageY-rect.height/2});
+        });
+
+        //modal
+        $(".info3 a").click(function(){
+            $(".info3 .modal").addClass("show");
+        });
+        $(".info3 .close").click(function(){
+            $(".info3 .modal").removeClass("show");
         });
     </script>
 </body>
