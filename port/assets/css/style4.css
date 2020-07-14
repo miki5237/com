@@ -42,18 +42,25 @@
 }
 #section4 {
     z-index: 6000;
-    height: 1000vh;
-    background: #075146;
+    height: 1100vh;
+    overflow: hidden;
+    background: #ffffff;
 }
 #section5 {
-    z-index: 5000;
+    z-index: 9000;
     height: 250vh;
-    background: #E4DEDB;
+    background: #075146;
 }
 #section6 {
-    z-index: 4000;
-    height: 200vh;
-    background: #075146;
+    z-index: 9000;
+    height: 300vh;
+    overflow: hidden;
+    background: #E4DEDB;
+}
+#section7 {
+    z-index: 9000;
+    overflow: hidden;
+    background: #E4DEDB;
 }
 
 /* container */
@@ -62,6 +69,25 @@
     max-width: 1400px;
     margin: 0 auto;
 }
+
+/* loading */
+.loading.Show {
+    display: flex;
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #075140;
+    z-index: 100000;
+    animation: loading 2s;
+}
+@keyframes loading {
+    0% {top: 0;}
+    70% {top: 0;}
+    100% {top: -100vh;}
+}
+
 
 
 /* pageYOffset */
@@ -77,7 +103,6 @@
     z-index: 10000;
     right: 0; top: 0;
     width: 10vw; height: 100vh;
-    background: #fff;
     padding: 10vh 0;
     background: #E4DEDB;
     border-left: 1px solid #075146;
@@ -160,16 +185,32 @@
 /* hamBox */
 .hamBox {
     position: fixed;
-    top: -100vh; left: 0;
+    top: -200vh; left: 0;
     width: 90vw;
     height: 100vh;
     z-index: 9900;
     background: #075146;
-    transition: 0.55s;
+    transition: 1s;
 }
 .hamBox.active {
     position: fixed;
     top: 0; left: 0;
+}
+.hamBox ul li {
+    text-align: center;
+    margin-top: 0.5%;
+}
+.hamBox ul li a {
+    font-family: "Montserrat", sans-serif;
+    white-space: nowrap;
+    font-size: 5vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #fff;
+}
+.hamBox ul li a:hover {
+    -webkit-text-fill-color: #fff;
 }
 
 /* sec1 */
@@ -695,7 +736,7 @@
 }
 .rightCont {
     position: relative;
-    width: 25vw;
+    width: 23vw;
     height: 40vh;
     top: -10vh;
     left: 45vw;
@@ -705,9 +746,9 @@
     height: 40vh;
 }
 .rightCont .leftContBot img {
-    width: 17vw;
-    top: 0.5vh;
-    left: 31%;
+    width: 12vw;
+    top: 1.0vh;
+    left: 40%;
 }
 .rightCont p {
     font-family: "S-CoreDream-4Regular";
@@ -725,7 +766,7 @@
 /* sec4 */
 .sec4 {
     position: fixed; left: 0; top: 0;
-    width: 310vw; height: 100vh;
+    width: 400vw; height: 100vh;
     background: #141414;
     overflow: hidden;
 }
@@ -739,6 +780,8 @@
 .sec4 .secTit {
     position: relative;
     width: 90vw;
+    z-index: 100;
+    background: #141414;
 }
 .sec4 .secTit .tit {
     font-family: "Montserrat";
@@ -758,67 +801,22 @@
 
 /* secLis */
 .sec4 .secLis {
-    position: relative;
-    width: 120vw;
-}
-.sec4 .secLis ul {
-    position: absolute;
-    right: 20vw;
-    -webkit-box-orient: vertical;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
     height: 100vh;
-    margin-top: -200vh;
+    z-index: -10;
 }
-.sec4 .secLis li {
-    margin-bottom: 2vh;
-}
-.sec4 .secLis li input {
-    position: absolute;
-    left: -9999px;
-}
-.sec4 .secLis li.active {
-    -webkit-text-fill-color: #fff;
-}
-.sec4 .secLis li:hover {
-    -webkit-text-fill-color: #fff;
-}
-.sec4 .secLis li {
-    display: block;
-    padding: 0.6vh 1.8vw 0.6vh 3.6vw;
-    border-radius: 99em;
-    transition: 0.5s ease;
-
+.sec4 .secLis li p {
     font-family: "S-CoreDream-6Bold";
     font-style: normal;
+    font-weight: normal;
+    white-space: nowrap;
     font-weight: 600;
-    font-size: 4vw;
+    font-size: 11vh;
     text-transform: uppercase;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0.05vw #fff;
-}
-.sec4 .secLis li:nth-child(1) {
-    letter-spacing: 0.7vw;
-}
-.sec4 .secLis li:nth-child(2) {
-    letter-spacing: 4vw;
-}
-.sec4 .secLis li:nth-child(3) {
-    letter-spacing: 0.7vw;
-}
-.sec4 .secLis li:nth-child(4) {
-    letter-spacing: 1.5vw;
-}
-.sec4 .secLis li:nth-child(5) {
-    letter-spacing: 2.5vw;
-}
-.sec4 .secLis li:nth-child(6) {
-    letter-spacing: 2.1vw;
-}
-.sec4 .secLis.show ul{
-    animation: secLis 1.5s forwards;
-}
-@keyframes secLis {
-    0% {margin-top: -200vh;}
-    100% {margin-top: 2vh;}
 }
 
 /* secCot */
@@ -830,7 +828,7 @@
 }
 .sec4 .secCot nav {
     position: absolute;
-    top: 3.5vh; left: -1.5vw;
+    bottom: 5vh; left: -0.5vw;
 }
 .sec4 .secCot nav li {
     display: inline-block; 
@@ -838,6 +836,7 @@
     border: 0.05vw solid #fff;
     box-sizing: border-box;
     padding: 1.5vh 1.4vw;
+    background: #141414;
 }
 .sec4 .secCot nav li a {
     font-family: 'ChosunilboNM', sans-serif;
@@ -868,52 +867,7 @@
     width: 60vw;
     height: 60vh;
     overflow: hidden;
-    box-shadow: 0px 0px 12px 8px rgba(7, 81, 70,.4);
-}
-.sec4 .secCot #loading .slider-img {
-    position: relative;
-    width: 180vw; height: 60vh;
-    overflow: hidden;
-}
-.sec4 .secCot #loading .slider-img .sliders {
-    float: left; width: 60vw;
-}
-.sec4 .secCot #loading .slider-img .s2 img {
-    margin-top: -50%;
-}
-.sec4 .secCot .Cot p {
-    font-family: 'Chosunilbo_myungjo';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.2vw;
-    line-height: 159%;
-    color: #FFFFFF;
-    margin-top: 1vh;
-    position: relative;
-}
-.sec4 .secCot .Cot a {
-    position: absolute;
-    top: 82vh;
-    right: 20vw;
-    color: #fff;
-    font-family: 'Montserrat Subrayada', sans-serif;
-    font-size: 1.2vw;
-    line-height: 118%;
-}
-.sec4 .secCot .Cot em {
-    position: absolute;
-    left: -7.5vw;
-    top: 14.5vh;
-
-    font-family: 'S-CoreDream-6Bold';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 4vw;
-    line-height: 118%;
-    letter-spacing: -0.055em;
-    text-transform: uppercase;
-    -webkit-text-fill-color: rgba(0, 0, 0, .4);
-    -webkit-text-stroke: 0.05vw #fff;
+    background: #000;
 }
 
 /* sec5 */
@@ -929,10 +883,36 @@
     font-size: 7.5vw;
     line-height: 50vh;
     text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+}
+.sec5 h2.sec5h2bot {
+    line-height: 0;
+}
+.sec5game {
+    margin-top: 30vh;
+    width: 89vw;
+    height: 100vh;
+}
+
+/* sec6 */
+.sec6 { 
+    padding-right: 10vw;
+    padding-top: 10vh;
+    position: relative;
+}
+.sec6 h2{
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 7.5vw;
+    line-height: 50vh;
+    text-align: center;
     color: #075146;
     text-transform: uppercase;
 }
-.sec5 .sec5-cont{ 
+.sec6 .sec6-cont{ 
     overflow: hidden;
     display: flex;
     flex-flow: column wrap;
@@ -941,86 +921,86 @@
     width: 100%;
     margin-top: 10vh;
 }
-.sec5 .sec5-cont div{ 
+.sec6 .sec6-cont div{ 
     width: 32%;
     margin-bottom: 2%;
     background: #000;
     overflow: hidden;
     position: relative;
 }
-.sec5 .sec5-cont div:nth-child(1) {height: 40vh;}
-.sec5 .sec5-cont div:nth-child(2) {height: 60vh;}
-.sec5 .sec5-cont div:nth-child(3) {height: 80vh;}
-.sec5 .sec5-cont div:nth-child(4) {height: 50vh;}
-.sec5 .sec5-cont div:nth-child(5) {height: 50vh;}
-.sec5 .sec5-cont div:nth-child(6) {height: 50vh;}
-.sec5 .sec5-cont div:nth-child(7) {height: 80vh;}
-.sec5 .sec5-cont div:nth-child(8) {height: 60vh;}
-.sec5 .sec5-cont div:nth-child(9) {height: 40vh;}
-.sec5 .sec5-cont div:nth-child(3n+1) {order:1}
-.sec5 .sec5-cont div:nth-child(3n+2) {order:2}
-.sec5 .sec5-cont div:nth-child(3n) {order:3}
+.sec6 .sec6-cont div:nth-child(1) {height: 40vh;}
+.sec6 .sec6-cont div:nth-child(2) {height: 60vh;}
+.sec6 .sec6-cont div:nth-child(3) {height: 80vh;}
+.sec6 .sec6-cont div:nth-child(4) {height: 50vh;}
+.sec6 .sec6-cont div:nth-child(5) {height: 50vh;}
+.sec6 .sec6-cont div:nth-child(6) {height: 50vh;}
+.sec6 .sec6-cont div:nth-child(7) {height: 80vh;}
+.sec6 .sec6-cont div:nth-child(8) {height: 60vh;}
+.sec6 .sec6-cont div:nth-child(9) {height: 40vh;}
+.sec6 .sec6-cont div:nth-child(3n+1) {order:1}
+.sec6 .sec6-cont div:nth-child(3n+2) {order:2}
+.sec6 .sec6-cont div:nth-child(3n) {order:3}
 
-.sec5 .sec5-cont div .img {
+.sec6 .sec6-cont div .img {
     width: 100%; height: 100%;
-    animation: sec5Cont1 .5s forwards;
+    animation: sec6Cont1 .5s forwards;
 }
-@keyframes sec5Cont1 {
+@keyframes sec6Cont1 {
     0% {transform: scale(1.2);}
     100% {transform: scale(1);}
 }
 
-.sec5 .sec5-cont div:nth-child(1) .img {
+.sec6 .sec6-cont div:nth-child(1) .img {
     background: url(../img/me@1200.jpg) no-repeat center center; 
     background-size: cover;
 }
-.sec5 .sec5-cont div:nth-child(2) .img {
+.sec6 .sec6-cont div:nth-child(2) .img {
     background: url(../img/Fix@1200.jpg) no-repeat center center; 
     background-size: cover;
 }
-.sec5 .sec5-cont div:nth-child(3) .img {
+.sec6 .sec6-cont div:nth-child(3) .img {
     background: url(../img/HighSchool@1200.jpg) no-repeat center center; 
     background-size: cover;
 }
-.sec5 .sec5-cont div:nth-child(4) .img {
+.sec6 .sec6-cont div:nth-child(4) .img {
     background: url(../img/dotcom@1200.jpg) no-repeat center center; 
     background-size: cover;
 }
-.sec5 .sec5-cont div:nth-child(5) .img {
+.sec6 .sec6-cont div:nth-child(5) .img {
     background: url(../img/StudyingJQuery@1200.jpg) no-repeat center center; 
     background-size: cover;
 }
-.sec5 .sec5-cont div:nth-child(6) .img {
+.sec6 .sec6-cont div:nth-child(6) .img {
     background: url(../img/LineComputerArtAcademy@1200.jpg) no-repeat center center; 
     background-size: cover;
 }
-.sec5 .sec5-cont div:nth-child(7) .img {
+.sec6 .sec6-cont div:nth-child(7) .img {
     background: url(../img/WorkingPicture@1200.jpg) no-repeat center center; 
     background-size: cover;
 }
-.sec5 .sec5-cont div:nth-child(8) .img {
+.sec6 .sec6-cont div:nth-child(8) .img {
     background: url(../img/Pygma@1200.jpg) no-repeat center center; 
     background-size: cover;
 }
-.sec5 .sec5-cont div:nth-child(9) .img {
+.sec6 .sec6-cont div:nth-child(9) .img {
     background: url(../img/TISTORY@1200.jpg) no-repeat center center; 
     background-size: cover;
 }
-.sec5 .sec5-cont div:hover .img {
-    animation: sec5Cont .5s forwards;
+.sec6 .sec6-cont div:hover .img {
+    animation: sec6Cont .5s forwards;
 }
-@keyframes sec5Cont {
+@keyframes sec6Cont {
     0% {transform: scale(1);}
     100% {transform: scale(1.2);}
 }
-.sec5 .sec5-cont div:hover .img::after {
+.sec6 .sec6-cont div:hover .img::after {
     content: '';
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: rgba(0,0,0,.4);
 }
-.sec5 .sec5-cont div .text {
+.sec6 .sec6-cont div .text {
     position: absolute;
     overflow: hidden;
     bottom: 10%;
@@ -1030,7 +1010,7 @@
     background: rgb(7, 81, 70, .8);
     opacity: 0;
 }
-.sec5 .sec5-cont div .text span {
+.sec6 .sec6-cont div .text span {
     position: absolute;
     left: 2vw;
     font-family: 'Chosunilbo_myungjo';
@@ -1041,7 +1021,7 @@
     color: #FFFFFF;
     white-space: nowrap;
 }
-.sec5 .sec5-cont div .text span a {
+.sec6 .sec6-cont div .text span a {
     font-family: 'Chosunilbo_myungjo';
     font-style: normal;
     font-weight: normal;
@@ -1051,15 +1031,75 @@
     white-space: nowrap;
     text-transform: uppercase;
 }
-.sec5 .sec5-cont div:hover .text {
+.sec6 .sec6-cont div:hover .text {
     opacity: 1; transition-duration: .5s;
 }
-.sec5 .sec5-cont div:hover .text span {
-    animation: sec5ContText linear infinite 120s .5s;
+.sec6 .sec6-cont div:hover .text span {
+    animation: sec6ContText linear infinite 120s .5s;
 }
-@keyframes sec5ContText {
+@keyframes sec6ContText {
     0% {transform: translateX(0vw);}
     100% {transform: translateX(-1000vw);}
+}
+
+/* sec7 */
+.sec7 { 
+    padding-right: 10vw;
+    position: relative;
+}
+.sec7 h2{
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 7.5vw;
+    text-align: center;
+    color: #075146;
+    text-transform: uppercase;
+}
+.sec7 ul {
+    width: 70%;
+    margin: 0 auto;
+}
+.sec7 ul li input {
+    background: rgba(0,0,0,0);
+    border: 0;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    color: #075140;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.8vw;
+    border-bottom: 3px solid #075140;
+}
+.sec7 ul li input::placeholder {
+    color: #075140;
+    text-transform: uppercase;
+}
+.sec7 ul li .inputde {
+    padding-bottom: 15vh;
+}
+.sec7 .send {
+    display: block;
+    margin: 10vh auto;
+    width: 15vw;
+    height: 4vw;
+    border: 1px solid #075140;
+}
+.sec7 .send em {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4vw;
+    line-height: 280%;
+    margin-left: 2.5vw;
+    color: #075140;
+}
+.sec7 .send img {
+    width: 4vw;
+    margin-top: 10%;
+    margin-left: 15%;
 }
 
 

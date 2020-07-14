@@ -54,7 +54,7 @@
 
         /* slide */
         .slider-wrap {
-            width: 1000px; height: 600px;
+            width: 50vw; height: 60vh;
             overflow: hidden;
             position: absolute; left: 50%; top: 50%;
             transform: translate(-50%, -50%);
@@ -62,10 +62,10 @@
         }
         .slider-img {
             position: relative;
-            width: 1000px; height: 600px;
+            width: 50vw; height: 60vh;
         }
         .slider-img .sliders {
-            height: 600px;
+            height: 60vh;
         }
     </style>
 
@@ -125,7 +125,7 @@
                 currentIndex = 0;
             }*/
             currentIndex < 4 ? currentIndex++ : currentIndex = 0;  //삼항 연산자
-            sliderImg.animate({top : currentIndex * (-600) + "px"}, 400)
+            sliderImg.animate({top : currentIndex * (-60) + "vh"}, 400)
         }, 3000);
     </script>
 </body>
