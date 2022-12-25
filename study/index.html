@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="김재민">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="김재민, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>김재민 | Study</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="김재민" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="김재민" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="김재민" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">WEB'S &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://wiss.tistory.com/">Design</a></li>
+                    <li><a href="https://webzz.tistory.com/">Coding</a></li>
+                    <li><a href="https://wtss.tistory.com/">Tutor</a></li>
+                    <li><a href="https://wess.tistory.com/">Edu</a></li>
+                    <li><a href="https://wsss.tistory.com/">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bs-header bgs4" id="content">
+        <div class="container">
+            <h1>Study Reference v1.0 &lt;/doc&gt;</h1>
+            <p><a href="http://miki5237.dothome.co.kr" target="_blank">miki5237.dothome.co.kr</a></p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+
+            <div class="col-md-9" role="main">
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">2020.03.11</h2>
+                    <p>브라켓 확장기능</p>
+                    <ul>
+                        <li>Emmet : 단축키</li>
+                        <li>Custom Work : 상단에 탭 메뉴 기능</li>
+                        <li>Beauty : 코드 정렬</li>
+                        <li>Indect Guide : 코팅 라인 가이드</li>
+                    </ul>
+
+                    <p>단축키</p>
+                    <ul>
+                        <li>복사하기 : Ctrl + C</li>
+                        <li>붇여넣기 : Ctrl + V</li>
+                        <li>전체 복사하기 : Ctrl + A</li>
+                        <li>4칸 이동하기 : Tad</li>
+                        <li>4칸 반대로 이동하기 : Shift</li>
+                        <li>여러칸 만들기 : ul>il*10 Tad</li>
+                        <li>작업 취소하기 : Ctrl + Z</li>
+                        <li>블랙켓 글 편하게 소환 : ! + Tab</li>
+                    </ul>
+
+                    <P>사이트</P>
+                    <ul>
+                        <a href="https://unsplash.com/">
+                            <li>상용적 무료 사진</li>
+                        </a>
+                        <a href="https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started">
+                            <li>HTML 정리</li>
+                        </a>
+                        <a href="https://materializecss.com/color.html">
+                            <li>무료 색갈 코드</li>
+                        </a>
+                        <a href="https://noonnu.cc/">
+                            <li>한글 무료 폰트</li>
+                        </a>
+                        <a href="https://www.cookierunfont.com/#section7">
+                            <li>제군들 나는 쿠키가 좋다</li>
+                        </a>
+                    </ul>
+
+
+
+                </div>
+                <!-- //Intro1 -->
+
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">2020.03.12</h2>
+                    <p>포토샵</p>
+                    <ul>
+                        <li>줄자 : Ctrl + R</li>
+                        <li>줄자 박스맞춰주는거 : Shift + Ctrl + ;</li>
+                        <li>레이어 글자 복사하기 : Alt</li>
+                        <li>텍스트가 그림처럼 인식함 : Ctrl + E</li>
+                        <li>레이어 복사 : Ctrl + J</li>
+                        <li>채도 변경 : Ctrl + U</li>
+                        <li>feather 복사 : Ctrl + F6</li>
+                    </ul>
+                    <p>브라켓</p>
+                    <ul>
+                        <li>박스 : div</li>
+                        <li>이름 지정 : id</li>
+                        <li>아이디가 붇은 박스 지정 : div#box1</li>
+                        <li>크기 글시 색 지정 : {width: 100%; height: 300px; background: red;}</li>
+                        <li>이미지 불러오기 : img src="이미지 경로" alt="사진대처문자" style="width=크기"</li>
+                        <li>크기 쉽게지정하기 : w크기 + Tad , h크기 + Tad</li>
+                        <li>색상 불러오기 : bgc#색갈코드 + Tad</li>
+                        <li>전체 선택하기 : *</li>
+                        <li>여백 지우기 : {margin: 0; padding: 0;} </li>
+                        <li>코드처럼 보이게 하기 : code</li>
+                        <li>글자 크기 : font-size: 크기</li>
+                        <li>글자 위치 : text-align: 위치</li>
+                        <li>링크 추가 : a href="파일 위치"</li>
+                    </ul>
+                    <P>브라켓 단축키</P>
+                    <ul>
+                        <li>시작 자동문 : ! + Tab</li>
+                        <li>자동 괄호 만들기 : Tab</li>
+                        <li>같은 줄 만들기 : Ctrl + D</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://threejs.org/examples/#webgl_lights_spotlight">
+                            <li>three.js</li>
+                        </a>
+                    </ul>
+                    <p>크롬 웹 스토어</p>
+                    <ul>
+                        <a href="https://chrome.google.com/webstore/search/Muzli?hl=ko">
+                            <li>muzli</li>
+                        </a>
+                        <a href="https://chrome.google.com/webstore/search/surfit?hl=ko">
+                            <li>Surfit</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro2 -->
+
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">2020.03.13</h2>
+                    <p>브라켓</p>
+                    <ul>
+                        <li>기호 보이게하기: &amp;#코드; </li>
+                        <li>사이드 붇히기: float: 방향</li>
+                        <li>깨진 박스 보이게하기: clear</li>
+                        <li>글자 대문자로 보이게하기 : text-transform: uppercase</li>
+                    </ul>
+                    <p>포토샵</p>
+                    <ul>
+                        <li>줄자 지우기: Ctrl + ;</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://entitycode.com/#math-content">
+                            <li>HTNL 기호 엔티티 코드</li>
+                        </a>
+                        <a href="https://wtss.tistory.com/category/SITE/01%20WEBSTANDARD">
+                            <li>HTML 복습하는 사이트</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">2020.03.16</h2>
+                    <p>브라켓</p>
+                    <ul>
+                        <li>아이디박스 바로만들기 : div#이름 + Tad</li>
+                        <li>아이디박스 같은이름으로 여러개 만들기 : div#이름>div#이름*만들숫자 + Tad</li>
+                        <li>박스 색갈 : background-color : #색갈 코드</li>
+                        <li>한칸식 드레그 : Shift + 방향키</li>
+                        <li>한줄 끝 드레그 : Shift + End</li>
+                        <li>한줄 드레그 : shift + Home</li>
+                        <li>숫자형 목록코드 : <code>&lt;ol&gt;&lt;/ol&gt;</code></li>
+                        <li>이름 표시 : class,id</li>
+                        <li>글자 폰트 위치 지정바로가기 : li h,w 크기 + Tad </li>
+                    </ul>
+                    <p>포토샵</p>
+                    <ul>
+                        <li>선택 툴 반전 : Ctrl + Shif t+ I</li>
+                        <li>흑백 : Ctrl + Shift + U</li>
+                        <li>Curves : Ctrl + Shift + M</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://docs.emmet.io/cheat-sheet">
+                            <li>Cheat Sheet</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro4 -->
+
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">2020.03.17</h2>
+                    <p>브라켓</p>
+                    <ul>
+                        <li><code>&lt;div id="이름"&gt;</code>바로만들기 : #이름 + Tab</li>
+                        <li><code>&lt;div class="이름"&gt;</code>바로만들기 : .이름 + Tab</li>
+                        <li>부모의 값을 상속 : inherit</li>
+                        <li>RGB로 색갈넣기!(A는 투명도임!) : <code>&lt;background: rgba(R, G, B, A);&gt;</code></li>
+                    </ul>
+                    <p>포토샵</p>
+                    <ul>
+                        <li>선택된 레이아웃 그룹화 : Ctrl + G</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://www.dbcut.com/bbs/index.php">
+                            <li>디비컷 웹디자인 구경 사이트</li>
+                        </a>
+                    </ul>
+                    <p>크롬 웹 스토어</p>
+                    <ul>
+                        <a href="https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl?hl=ko">
+                            <li>Full Page Screen Capture(웹 페이지 캡쳐)</li>
+                        </a>
+                        <a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=ko">
+                            <li>Web Developer(웹 개발자)</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro5 -->
+                
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">2020.03.18</h2>
+                    <p>브라켓</p>
+                    <ul>
+                        <li>표만들기 : table</li>
+                        <li>세로 늘리기 : tr</li>
+                        <li>가로 늘리기 : td</li>
+                        <li>표 세로 합치기 : rowspan</li>
+                        <li>표 가로 합치기 : colspan</li>
+                        <li>글시 중앙에 가게하기 : class="ce va"</li>
+                        <li>글시 밑으로 내려가게하기 : br</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://www.ncs.go.kr/unity/th03/ncsSearchMain.do">
+                            <li>NCS 국가직무능력표준 코드검색</li>
+                        </a>
+                        <a href="https://www.figma.com">
+                            <li>Where teams design together</li>
+                        </a>
+                        <a href="https://uxtools.co/survey-2019">
+                            <li>2019년 설계 도구 설문 조사 결과</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro6 -->
+                
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">2020.03.19</h2>
+                    <p>브라켓</p>
+                    <ul>
+                        <li>친구 지정하기 : +</li>
+                        <li>태그 여러개 지정하기 : ,</li>
+                        <li>레이아웃 가운대 정렬 : m0-a + Tab</li>
+                        <li>코드 나열할때 뒤에 있는 코드의 우선순위가 높다.</li>
+                        <li>글 끝날때 /* 주석표시로 보기 편하게 하자!</li>
+                    </ul>
+                    <p>일러스트</p>
+                    <ul>
+                        <li>일러스트 설정 : Ctrl + K</li>
+                        <li>10칸식 늘리기 : Shift + 방향키</li>
+                        <li>원 만들기 : L</li>
+                        <li>네모 만들기 : M</li>
+                        <li>선 정렬맞춰서 복붇하기 : 선택 후 Alt + Shift</li>
+                        <li>자른 면 선 이어주기 : Ctrl + J</li>
+                        <li>페스파인더 : Shift+ Ctrl + F9</li>
+                        <li>스트록 : Ctrl + F10</li>
+                        <li>레이어 : F7</li>
+                        <li>레이어 제일 뒤로 보내기 : Ctrl + Shift + [</li>
+                    </ul>
+                </div>
+                <!-- //Intro7 -->
+                
+                <!-- Intro8 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">2020.03.20</h2>
+                    <p>브라켓</p>
+                    <ul>
+                        <li>주석표시 편하게하기 : 드레그 후 Ctrl + /</li>
+                        <li>text-align: right; 쉽게쓰기 : tar + Tab</li>
+                        <li>5px 20px 6px 20px 쉽게쓰기 : p5-20-6-20</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://github.com/webstoryboy/webstandard2019">
+                            <li>깃허브</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro8 -->
+                
+                <!-- Intro9 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro9" class="page-header">2020.03.23</h2>
+                    <p>브라켓</p>
+                    <ul>
+                        <li>의미가 있는 이미지(img태그)는 대처문자(alt)를 꼭 넣자.</li>
+                        <li>바로만들기 ""안에 글시까지 넣기 : a[#] + Tab
+                        <br>(다른 에디켓에서 간흑 바로만들기가 안될때 a[href="#"] + Tab으로도 됩니다.)</li>
+                        <li>마지막 선택자 지명하기 : .이름:last-child {}
+                        <br>(자식을 지명할땐 ".이름:last-child 자식이름{}"으로 하자.)</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="http://darum.daum.net">
+                            <li>다음 웹표준 (다룸)</li>
+                        </a>
+                        <a href="https://nuli.navercorp.com">
+                            <li>네이버 웹표준 (널리)</li>
+                        </a>
+                        <a href="https://www.wah.or.kr:444">
+                            <li>인증마크관련 사이트 (웹 접근성 연구소)</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro9 -->
+                
+                <!-- Intro10 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro10" class="page-header">2020.03.24</h2>
+                    <p>브라켓</p>
+                    <ul>
+                        <li>vertical-align: top: 이미지 간격을 없에줌</li>
+                        <li>&lt;div class="column col1"&gt; : .col$ + Tab
+                        <br>($를 2개를 쓰면 숫자가 2글자가 됩니다.)</li>
+                        <li>접근성을 위한 숨기기 : aria-hidden="true"</li>
+                    </ul>
+                </div>
+                <!-- //Intro10 -->
+                
+                <!-- Intro11 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro11" class="page-header">2020.03.25</h2>
+                    <p>브라켓</p>
+                    <ul>
+                        <li>{overflow: hidden; text-overflow: ellipsis; white-space: nowrap;} : 글자 한줄로 만들기</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://coderap.tistory.com/499">
+                            <li>웹 퍼블리셔 면접시 많이 물어보는 질문!</li>
+                        </a>
+                        <a href="https://tympanus.net/Development/HoverEffectIdeas">
+                            <li>호버 효과 아이디어 (CSS효과)</li>
+                        </a>
+                    </ul>
+                    <p>smudge효과</p>
+                    <ol>
+                        <li>팬툴로 선따기</li>
+                        <li>Ctrl + J 로 레이어에 그린거 두기</li>
+                        <li>배경 레이어 Filter > Add Noise(15%,Gaussian,Monochromatic)</li>
+                        <li>배경 레이어 Filter > Gaussian Blur(1.5) - Ctrl + L > Leveks (13, 0.59, 221)</li>
+                        <li>그림 레이어 Ctrl + U > Hus Saturation (-2, 28, 0)</li>
+                        <li>그림 레이어 Filter > Unsharp Mask (123, 7.7, 0)</li>
+                        <li>팬 종류 Pastel 34</li>
+                    </ol>
+                </div>
+                <!-- //Intro11 -->
+                
+                <!-- Intro12 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro12" class="page-header">2020.03.29</h2>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://getbootstrap.com">
+                            <li>부트 스트랩 (플레윔 워)</li>
+                        </a>
+                    </ul>
+                    <p>최신 공지사항 만들기</p>
+                    <ul>
+                        <li>
+                            <P>HTML</P>
+                            <br><pre class="line-numbers language-markup"><code>&lt;div class="notice5"&gt;
+    &lt;h4&gt;최신 &lt;em&gt;공지사항&lt;/em&gt;&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;JPE, PNG, GIF의 차이점은 무엇인가요?&lt;/a&gt;&lt;span&gt;2020.03.25&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Ul 디자인과 Ux 디자인의 차이점을 설명하세요?&lt;/a&gt;&lt;span&gt;2020.03.25&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;인터렉션 디자인의 핵심은 무엇이라고 생각하나요?&lt;/a&gt;&lt;span&gt;2020.03.25&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="#" class="more" title="더보기"&gt;더보기&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                        </li>
+                        <li>
+                            <p>CSS</p>
+                            <br><pre class="line-numbers language-css"><code>.notice5 {position: relative; border: 1px solid #ccc; margin-top: 15px;}
+.notice5 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px; color: #2c94c4;}
+.notice5 h4 em {color: #cf3292;}
+.notice5 ul {padding: 10px; }
+.notice5 li {overflow: hidden; padding-left: 8px; background: url(../img/dot.gif) no-repeat 0 8px;}
+.notice5 li a {float: left; width: 70%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice5 li span {float: left; width: 30%; text-align: right;}
+.notice5 .more {position: absolute; right: 9px; top: 9px;}</code></pre>
+                        </li>
+                        <li>border: 1px solid #ccc; : 박스 만들기</li>
+                        <li>border-bottom: 1px solid #ccc; : 밑선 만들기</li>
+                        <li>position: absolute; right: 9px; top: 9px; : 위치 초기화 후 지정</li>
+                        <li>float: left; : 가로정렬</li>
+                        <li>overflow: hidden; : float 깨짐 형상 방지로 부모한테 넣자!</li>
+                        <li>text-overflow: ellipsis; : 지정된 칸 넘어간 긴 글시 ...으로보이기</li>
+                        <li>white-space: nowrap; : 길고 긴 텍스트 문자 1줄로 만들기</li>
+                        <li>margin-top: 15px; : 위쪽 여백</li>
+                        <li>padding-left: 8px; : 이미지와의 간격</li>
+                        <li>background: url(../img/dot.gif) no-repeat 0 8px; : 아이콘
+                        <br>no-repeat : 이미지 반복여부 결정(no)를 주면 반복안함!
+                        </li>
+                    </ul>
+                </div>
+                <!-- //Intro12 -->
+                
+                <!-- Intro13 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro13" class="page-header">2020.03.30</h2>
+                    <p>브라켓</p>
+                    <ul>
+                        <li>가상요소 지정할떄 ::를 주면 익스플루9버전에서는 안나옵니다.
+                        <br>(:하나만 쓰면 보이지만 보통 ::로 합니다.)</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://wiss.tistory.com/category/SITE/Mockup">
+                            <li>목업 파일 사이트</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro13 -->
+
+                <!-- Intro14 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro14" class="page-header">2020.03.31</h2>
+                    <p>브라켓</p>
+                    <ul>
+                        <li>부모 > 부모 : 첫번째 자식만 적용</li>
+                        <li>width = margin + padding + border</li>
+                    </ul>
+                    <p>비주얼 스튜디오 코드</p>
+                    <ul>
+                        <li>Ctrl + D : 같은 글 여러개 동시선택가능</li>
+                        <li>Alt + 클릭 : 선택한 줄에 글 동시에 쓰기가능</li>
+                        <li>Alt + 방향키 : 줄 위치 위아레 변경가능</li>
+                        <li>Ctrl + Alt + 방향키 : 방향키 방향으로 글자 복붇하기</li>
+                        <li>Alt + 마우스 드레그 : 처음 마우스 커서 기준으로 드레그하기</li>
+                        <li>Ctrl + E : 줄 정리</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://ricostacruz.com/til/css-media-query-breakpoints">
+                            <li>어떤 미디어 쿼리 중단 점을 사용해야합니까?</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro14 -->
+
+                <!-- Intro15 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro15" class="page-header">2020.04.01</h2>
+                    <p>비주얼 스튜디오 코드</p>
+                    <ul>
+                        <li>Alt + Z : 줄 해상도에 맞게 맞춰줌</li>
+                    </ul>
+                    <p>일러스트</p>
+                    <ul>
+                        <li>Ctrl + 2 : 움직이지 못하게 고정</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://gsnedders.html5.org/outliner">
+                            <li>HTML5 아웃라인 미리보기</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro15 -->
+
+                <!-- Intro16 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro16" class="page-header">2020.04.02</h2>
+                    <p>비주얼 스튜디오 코드</p>
+                    <ul>
+                        <li>.box.sha2*10>.shadow$$@11 : 11번부터 만들기</li>
+                    </ul>
+                    <p>일러스트</p>
+                    <ul>
+                        <li>Ctrl + Shift + I : 일러스트 perspective grid tool 삭제방법 (원근감 격자도구)</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://webgradients.com">
+                            <li>백그라운드 컬러 사이트</li>
+                        </a>
+                        <a href="https://codepen.io">
+                            <li>설치하지 않고 인터넷으로 코딩 가능한 사이트</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro16 -->
+
+                <!-- Intro17 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro17" class="page-header">2020.04.06</h2>
+                    <p>비주얼 스튜디오 코드</p>
+                    <ul>
+                        <li>Ctrl + H : 드레그 한 단어 모두 선택</li>
+                        <li>Shift + Tab : 글 앞에 여백 지우기</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://fontawesome.com">
+                            <li>웹 아이콘 다운 사이트</li>
+                        </a>
+                        <a href="https://css-tricks.com/the-shapes-of-css">
+                            <li>css도형 사이트</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro17 -->
+
+                <!-- Intro18 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro18" class="page-header">2020.04.13</h2>
+                    <p>비주얼 스튜디오 코드</p>
+                    <ul>
+                        <li>자동완성 보기 : Ctrl + 스페이스바</li>
+                    </ul>
+                    <p>제이쿼리 (웹 디자인 기능사 실기)</p>
+<pre class="line-numbers language-markup"><code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    var slideCount = $(".slideImg").length;
+    //alert(slideCount);
+    var currentIndex = 0;
+    var slidePosition = 0;
+    
+    setInterval(function(){
+        if(currentIndex &lt; 2){
+            currentIndex++;
+        } else {currentIndex = 0;}
+        slidePosition = currentIndex * (-1000)+"px";
+        $(".slideList").animate({ left: slidePosition },400);
+    },3000)
+&lt;/script&gt;</code></pre>  
+                    <p>클리어 픽스</p>
+<pre class="line-numbers language-css"><code>/* clearfix */
+.clearfix::before, .clearfix::after {
+    content: ''; display: block; clear: both;
+}</code></pre>
+                </div>
+                <!-- //Intro18 -->
+
+                <!-- Intro19 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro19" class="page-header">2020.04.14</h2>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://sachinchoolur.github.io/lightgallery.js">
+                            <li>라이트 겔러리</li>
+                        </a>
+                        <a href="https://kenwheeler.github.io/slick">
+                            <li>겔러리 애니메이션</li>
+                        </a>
+                    </ul>
+                    <p>자바스크립트 반복문</p>
+<pre class="line-numbers language-css"><code>for(let i=0; i&lt;arr6.length; i++){
+document.write(arr6[i]);
+}</code></pre>
+                </div>
+                <!-- //Intro19 -->
+
+                <!-- Intro20 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro20" class="page-header">2020.04.16</h2>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="http://ourownthing.co.uk/gradpad.html">
+                            <li>백그라운드 색 지정 사이트</li>
+                        </a>
+                        <a href="https://wsss.tistory.com">
+                            <li>CSS모움(web's)</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro20 -->
+
+                <!-- Intro21 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro21" class="page-header">2020.04.20</h2>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://sass-lang.com">
+                            <li>Sass(사스)</li>
+                        </a>
+                    </ul>
+                    <p>if문 약식</p>
+<pre class="line-numbers language-css">let num = 201;<code>
+if(true)document.write(num);</code></pre>
+                </div>
+                <!-- //Intro21 -->
+
+                <!-- Intro22 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro22" class="page-header">2020.04.21</h2>
+                    <p>일러스트</p>
+                    <ul>
+                        <li>줄자 만들기 : Ctrl+R</li>
+                    </ul>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://github.com/yamoo9/PSD2HTML-CSS/wiki/%EC%9B%B9-%EA%B7%B8%EB%A6%AC%EB%93%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C">
+                            <li>웹 그리드 시스템</li>
+                        </a>
+                        <a href="https://guideguide.me/changelog">
+                            <li>포토샵 CS5 / CS6 가이드 확장 프로그렘</li>
+                        </a>
+                        <a href="https://material.io/design">
+                            <li>Design(그리드 해상도 설명)</li>
+                        </a>
+                    </ul>
+                    <p>SCSS</p>
+                    <ul>
+                        <li>클레스 다중 선택 (SCSS)
+<pre class="line-numbers language-css"><code>div[class^="bubble-"]{}</code></pre></li>
+                        <li>px+%다중계산
+                            <pre class="line-numbers language-css"><code>left: calc(100% - 150px);</code></pre>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //Intro22 -->
+
+                <!-- Intro23 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro23" class="page-header">2020.04.22</h2>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://www.comcbt.com/xe/j9/1949245">
+                            <li>최강 자격증 기출문제 전자문제집 CBT</li>
+                        </a>
+                        <a href="https://www.gunsys.com/q/index.php?midCode=1213">
+                            <li>웹디자인기능사 필기 기출문제</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro23 -->
+
+                <!-- Intro24 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro24" class="page-header">2020.04.29</h2>
+                    <p>비주얼 스튜디오 코드</p>
+                    <ul>
+                        <li>Ctrl + Shift + k : 행 삭제</li>
+                        <li>Ctrl + X : 행 잘라내기</li>
+                        <li>Alt + Up,Down : 행 위아레로 이동하기</li>
+                        <li>Ctrl + Enter : 아랫줄에 행 산입</li>
+                        <li>Ctrl + Shift + Enter : 아랫줄에 행 산입</li>
+                        <li>Ctrl + Alt + Up,Down : 여러줄 선택</li>
+                        <li>Ctrl + Shift + L : 현제 드래그한 글 단체선택</li>
+                        <li>Ctrl + [,] : 들여쓰기,내여쓰기</li>
+                        <li>Ctrl + / : 주석 처리</li>
+                    </ul>
+                </div>
+                <!-- //Intro24 -->
+
+                <!-- Intro25 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro25" class="page-header">2020.05.12</h2>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://jqueryui.com">
+                            <li>제이쿼리 UI</li>
+                        </a>
+                        <a href="https://swiperjs.com/demos">
+                            <li>swiper 슬라이더</li>
+                        </a>
+                    </ul>
+                </div>
+                <!-- //Intro25 -->
+
+                <!-- Intro26 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro26" class="page-header">2020.05.26</h2>
+                    <p>사이트</p>
+                    <ul>
+                        <a href="https://disqus.com">
+                            <li>디스커스컴</li>
+                        </a>
+                        <a href="https://cubic-bezier.com/#0,.54,.08,1.05">
+                            <li>cubic-bezier</li>
+                        </a>
+                    </ul>
+                    <p>면접 시 물어보는거</p>
+                    <ul>
+                        <li>깃허브 : 현상관리프로그램</li>
+                        <li>제이쿼리 : 자바스크립트 라이브러리</li>
+                    </ul>
+                </div>
+                <!-- //Intro26 -->
+
+            </div>
+            <!-- //col-md-9 -->
+
+            <!-- //col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">2020.03</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro1">2020.03.11</a></li>
+                                <li><a href="#intro2">2020.03.12</a></li>
+                                <li><a href="#intro3">2020.03.13</a></li>
+                                <li><a href="#intro4">2020.03.16</a></li>
+                                <li><a href="#intro5">2020.03.17</a></li>
+                                <li><a href="#intro6">2020.03.18</a></li>
+                                <li><a href="#intro7">2020.03.19</a></li>
+                                <li><a href="#intro8">2020.03.20</a></li>
+                                <li><a href="#intro9">2020.03.23</a></li>
+                                <li><a href="#intro10">2020.03.24</a></li>
+                                <li><a href="#intro11">2020.03.25</a></li>
+                                <li><a href="#intro12">2020.03.29</a></li>
+                                <li><a href="#intro13">2020.03.30</a></li>
+                                <li><a href="#intro14">2020.03.31</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro15">2020.04</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro15">2020.04.01</a></li>
+                                <li><a href="#intro16">2020.04.02</a></li>
+                                <li><a href="#intro17">2020.04.06</a></li>
+                                <li><a href="#intro18">2020.04.13</a></li>
+                                <li><a href="#intro19">2020.04.14</a></li>
+                                <li><a href="#intro20">2020.04.16</a></li>
+                                <li><a href="#intro21">2020.04.20</a></li>
+                                <li><a href="#intro22">2020.04.21</a></li>
+                                <li><a href="#intro23">2020.04.22</a></li>
+                                <li><a href="#intro24">2020.04.29</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro25">2020.05</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro25">2020.05.12</a></li>
+                                <li><a href="#intro26">2020.05.26</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+</body></html>

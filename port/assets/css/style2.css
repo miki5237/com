@@ -1,0 +1,178 @@
+/* layout */
+#contents {}
+#contents > section {position: relative;}
+#section1 {
+    z-index: 9000;
+    width: 100%;
+    height: 100vh; background: url(../img/header.jpg) no-repeat center center; 
+    background-size: cover;
+}
+#section1::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5B5B5B), to(rgba(151, 151, 151, 0)));
+    background: linear-gradient(180deg, #5B5B5B 0%, rgba(151, 151, 151, 0) 100%);
+}
+#section2 {
+    z-index: 8000;
+    height: 6000px; 
+    background: #075140;
+}
+#section3 {
+    height: 6000px; 
+    z-index: 7000;
+}
+#section4 {z-index: 6000;}
+#section5 {z-index: 5000;}
+#section6 {z-index: 4000;}
+
+/* container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+/*    background: #ccc;*/
+}
+
+
+/* pageYOffset */
+.pageYOffset {
+    position: fixed; right: 20px; top: 20px;
+    z-index: 10001;
+    color: #000;
+}
+
+/* nav */
+#nav {
+    position: fixed;
+    z-index: 10000;
+    right: 0; top: 0;
+    width: 10vw; height: 100vh;
+    background: #fff;
+    padding: 10vh 0;
+    background: #E4DEDB;
+    border-left: 1px solid #075146;
+}
+#nav ul {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    height: 80vh;
+}
+#nav li {
+    flex-basis: 25%;
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav li span {
+    display: block;
+    transform: rotate(90deg);
+}
+#nav li a {
+    font-size: 1.2vw;
+    color: #075146;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* sec1 */
+.sec1 {
+    width: 100%; overflow: hidden;
+    height: 100vh;
+    position: relative; z-index: 10;
+}
+.sec1 h1 {
+    font-size: 3vw;
+    line-height: 1;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    color: #fff;
+    padding: 3vw;
+}
+.sec1 h1 em {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 2vw;
+    letter-spacing: 0.8vw;
+}
+.sec1 .bottom {
+    position: absolute; left: 0; bottom: -8vw;
+    white-space: nowrap;
+    font-size: 14vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    font-family: "Montserrat";
+}
+
+
+
+/* sec2 */
+.sec2 {
+    position: fixed; left: 0; top: 0;
+    width: 500vw; height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+.sec2 > div {
+    float: left;
+    width: 100vw;
+    height: 100vh;
+    color:#fff;
+    font-size: 14vw;
+}
+.sec2 > div:nth-child(1){background: #333;}
+.sec2 > div:nth-child(2){background: #444;}
+.sec2 > div:nth-child(3){background: #555;}
+.sec2 > div:nth-child(4){background: #666;}
+.sec2 > div:nth-child(5){background: #777;}
+
+
+
+/* sec3 */
+.sec3 { 
+    padding-right: 10vw;
+    padding-top: 20vh;
+}
+.sec3 .title h3 {
+    text-align: center;
+    font-size: 8vw;
+    color: #075146;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

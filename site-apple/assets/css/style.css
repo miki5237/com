@@ -1,0 +1,115 @@
+/* container */
+.container {
+    width: 100vw; margin: 0 auto;
+    max-width: 1000px;
+}
+
+/* row */
+.row {position: relative; margin: 0 20px;}
+.header-deta {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    
+    color: #000000;
+    
+    opacity: 0.5;}
+.header-title {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: #000000;
+}
+.header-id {
+    position: absolute;
+    right: 5.47%;
+    top: 24.93%;
+    width: 36px;
+    height: 36px;
+
+    background: linear-gradient(218.88deg, #A7A5A5 10.81%, rgba(255, 255, 255, 0) 89.48%), #E5E5E5;
+    border-radius: 50px;
+}
+.header-id span{
+    font-family: "SF Pro Display";
+    text-align: center;
+    margin: 9px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+
+/* layout */
+.container {border-bottom: 1px solid #ccc; padding: 20px 0;}
+#recommendedArtist {background: #F3F2F8; width: 100vw;}
+
+/* banner */
+.banner {}
+.banner .banner-title {font-family: "SF Pro Display";}
+.banner .banner-title .bt-stit{font-size: 12px; line-height: 29px; color: #DA5E7C;}
+.banner .banner-title .bt-tit{font-size: 22px; line-height: 34px;}
+.banner .banner-title .bt-desc{font-size: 22px; line-height: 34px; color: #818181;font-weight: 100;}
+.banner img {width: 100%;}
+.banner-img02 {width: 100vw; display: flex; margin: 10px 0;}
+.banner-img02 .pic{width: 49vw; float: left; margin-right: 4%;}
+.banner-img02 h2 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+.banner-img02 p {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    opacity: 0.5;
+}
+.banner03 {overflow: hidden; margin: 20px 0;}
+.banner03 .banner-img .pic {float: left; width: 25vw;}
+.banner03 .banner-tit {float: left; margin-left: 20px;}
+.banner03 .banner-tit span {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+
+    color: #DA5E7C;
+}
+.banner03 .banner-tit h2 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.banner04 .banner-p {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    position: absolute;
+    top: -0.2vh;
+    left: 80vw;
+    font-weight: 300;
+    font-size: 12px;
+    color: #D24262;
+}
+.banner04 .swiper-wrapper .swiper-slide .slide-img {
+    width: 30vw; border: 50%;
+}
+
+

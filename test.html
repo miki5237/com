@@ -1,0 +1,149 @@
+&lt;?php
+    include '../connect/connect.php';
+    include '../connect/session.php';
+    include '../connect/checkSession.php';
+
+    $sql = "SELECT kind FROM quiz";
+    $result = $dbConnect -&gt;query($sql);
+
+    if($result){
+    	$quizDataCount = $result -&gt; num_rows;
+    	$answer1 = 0;
+    	$answer2 = 0;
+    	$answer3 = 0;
+    	$answer4 = 0;
+
+    	if($quizDataCount &gt; 0){
+    		for($i=0; $i &lt; $quizDataCount; $i++){
+    			$quizData = $result -&gt; fetch_array(MYSQLI_ASSOC);
+
+    			switch ($quizData['kind']) {
+    				case '1':
+    					$answer1++;
+    					break;
+    				case '2':
+    					$answer2++;
+    					break;
+    				case '3':
+    					$answer3++;
+    					break;
+    				case '4':
+    					$answer4++;
+    					break;
+
+    				default:
+    					# code...
+    					break;
+    			}
+    		}
+    	} else {
+    		echo "데이터가 없습니다.";
+    		exit;
+    	}
+    } else {
+    	echo "에러 발생 - 관리자에게 문의하세요!";
+    	exit;
+    }
+?&gt;
+
+&lt;!doctype html&gt;
+&lt;html lang="ko"&gt;
+	&lt;head&gt;
+		&lt;?php
+		    include '../dom/head-meta.php';
+		?&gt;
+		&lt;title&gt;PHP Reference&lt;/title&gt;
+		&lt;?php
+		    include '../dom/head-link.php';
+		?&gt;
+		
+		&lt;style&gt;
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div class="container"&gt;
+			&lt;!-- blog-header --&gt;
+			&lt;?php
+			    include '../dom/blog-header.php';
+			?&gt;
+			&lt;!-- //blog-header --&gt;
+
+			&lt;!-- blog-nav --&gt;
+			&lt;?php
+			    include '../dom/blog-nav.php';
+			?&gt;
+			&lt;!-- //blog-nav --&gt;
+
+			&lt;div class="jumbotron p-4 p-md-5 text-white rounded bg-dark"&gt;
+				&lt;div class="col-md-6 px-0"&gt;
+					&lt;h2 class="display-5"&gt;정답 확인 게시판!!&lt;/h2&gt;
+					&lt;p class="my-3"&gt;PHP를 이용한 간단한 게시판입니다.&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+
+		
+		&lt;main role="main" class="container"&gt;
+			&lt;div class="row"&gt;
+				&lt;div class="col-md-12 blog-main"&gt;
+					&lt;div class="my-3 p-3 bg-white rounded shadow-sm"&gt;
+						&lt;h3 class="border-bottom border-gray pb-2 mb-0"&gt;퀴즈 결과 확인&lt;/h3&gt;
+						&lt;div class="text-muted pt-3"&gt;
+
+							&lt;h4&gt;에어 슬레쉬 스텝 커멘드는 무엇인가요?&lt;/h4&gt;
+							&lt;ol&gt;
+								&lt;li class="text-success"&gt;위 앞 앞(오버) 아레 뒤 Z&lt;/li&gt;
+								&lt;li&gt;위(오버) 앞 앞 밑 뒤 뒤 밑 Z&lt;/li&gt;
+								&lt;li&gt;앞 앞(오버) 위 아레 위 아레 위 아레 위 아레 Z&lt;/li&gt;
+								&lt;li&gt;앞 앞 위 뒤 뒤 아레 Z&lt;/li&gt;
+							&lt;/ol&gt;
+							&lt;p class="media-body pb-3 mb-0 lh-125 border-bottom border-gray"&gt;
+							&lt;strong class="d-block text-gray-dark"&gt;정답 해설&lt;/strong&gt;
+							물리엔진으로 인해 대쉬 점프 도중 앞 키를 유지한체 뒤키를 눌렷다 때면 기본 점프상태에서 운동애너지가 유지되어 앞으로 나아가 Z키를 누르면 
+							&lt;br&gt;기본 점프z상태로 앞으로 나아가는 에어슬레쉬가 된다.
+							&lt;/p&gt;
+							&lt;ul class="list-group"&gt;
+								&lt;li class="list-group-item"&gt;총 참여 인원 : &lt;?=$quizDataCount?&gt;&lt;/li&gt;
+								&lt;li class="list-group-item"&gt;1번 정답 : &lt;?=$answer1?&gt;명&lt;/li&gt;
+								&lt;li class="list-group-item"&gt;2번 정답 : &lt;?=$answer2?&gt;명&lt;/li&gt;
+								&lt;li class="list-group-item"&gt;3번 정답 : &lt;?=$answer3?&gt;명&lt;/li&gt;
+								&lt;li class="list-group-item"&gt;4번 정답 : &lt;?=$answer4?&gt;명&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;!-- //col-md-8 --&gt;
+				
+			&lt;/div&gt;
+			&lt;!-- //row --&gt; 
+		&lt;/main&gt;
+		&lt;!-- //container --&gt;
+		
+		&lt;!— blog-footer —&gt;
+		&lt;?php
+		    include '../dom/blog-footer.php';
+		?&gt;
+		&lt;!— //blog-footer —&gt;
+
+		&lt;!— script —&gt;
+		&lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"&gt;&lt;/script&gt;
+		&lt;script src="../assets/js/bootstrap.min.js"&gt;&lt;/script&gt;
+		&lt;script&gt;
+			$('.dropdown-toggle').dropdown()
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;

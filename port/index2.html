@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    
+    <!-- webfonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pageYOffset"></div>
+   
+    <nav id="nav">
+        <ul>
+            <li class="ham"><a href="#"><span>11</span></a></li>
+            <li><a href="#"><span>introduction</span></a></li>
+            <li><a href="#"><span>work</span></a></li>
+            <li><a href="#"><span>contact</span></a></li> 
+        </ul>
+    </nav>
+    <!-- //nav -->
+    
+    <section id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <h1>portfolio <em>kimjaemin</em></h1>
+                <p class="bottom">portfolio portfolio portfolio</p>
+            </div>
+        </section>
+        <!-- //section1 -->
+        
+        <section id="section2">
+            <div class="sec2" 
+                data-1000 = "left: 0vw"
+                data-6000 = "left: -500vw"
+                >
+                <div>sec2-1</div>
+                <div>sec2-2</div>
+                <div>sec2-3</div>
+                <div>sec2-4</div>
+                <div>sec2-5</div>
+            </div>
+        </section>
+        <!-- //section2 -->
+        
+        <section id="section3">
+            <div class="container">
+                <div class="sec3">
+                    <div class="title">
+                        <h3>Animation</h3>
+                        <figure>
+                            <img src="assets/img/an-bg.jpg" alt="">
+                        </figure>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <!-- //section3 -->
+        
+        <section id="section4"></section><!-- //section4 -->
+        <section id="section5"></section><!-- //section5 -->
+        <section id="section6"></section><!-- //section6 -->
+    </section>
+    <!-- //contents -->
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/skrollr.min.js"></script>
+    <script>
+        //skrollr
+        var s = skrollr.init({
+            edgeStrategy: 'set',
+            easing: 'linear'
+        });
+        
+        window.addEventListener("scroll", () => {
+            let pageYOffset = window.pageYOffset || document.documentElement.scrollTop;
+            document.querySelector(".pageYOffset").textContent = Math.floor(pageYOffset);
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Steps</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        body {
+  background: #fcdcdf;
+  height: 100vh;
+}
+#animation {
+  background-image: url(https://tistory2.daumcdn.net/tistory/3108288/skin/images/steps.jpg);
+  width: 400px; height: 300px;
+  position: absolute; left: 50%; top: 50%;
+  margin-left: -200px; margin-top: -150px;
+  animation: ani 1s steps(16, start) infinite;
+}
+#animation.btnStart {animation-play-state: running}
+#animation.btnStop {animation-play-state: paused}
+
+@keyframes ani {
+  0% {background-position: 0 0}
+  100% {background-position: -6400px 0}
+}
+.btn {
+  position: absolute; top: 10px; left: 10px;
+  z-index: 1000;
+}
+.btn a {
+  background: #99adcc; color: #fff;
+  padding: 8px 10px;
+  margin: 2px;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+    </style>
+</head>
+<body>
+    <div id="animation"></div>
+
+<div class="btn">
+  <a href="#c" class="btnStart">Start</a>  
+  <a href="#c" class="btnStop">stop</a>
+</div>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(".btnStart").click(function(){
+  $("#animation").removeClass().addClass("btnStart");
+});
+
+$(".btnStop").click(function(){
+  $("#animation").removeClass().addClass("btnStop");
+});
+    </script>
+</body>
+</html>
